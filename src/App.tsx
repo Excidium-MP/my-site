@@ -1,6 +1,10 @@
 import { useState, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Layout from './components/Layout'
 import Home from './pages/Home'
+import About from './pages/About'
+import Portfolio from './pages/Portfolio'
+import Contact from './pages/Contact'
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -22,21 +26,14 @@ function App() {
   }
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
-      <nav className="fixed top-0 right-0 p-4 z-50">
-        <button
-          onClick={toggleDarkMode}
-          className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
-          aria-label="Toggle dark mode"
-        >
-          {darkMode ? '☀️' : '🌙'}
-        </button>
-      </nav>
-
+    <Layout darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
-    </div>
+    </Layout>
   )
 }
 
