@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "1.0.0",
   "type": "module",
-  "homepage": "https://YOUR_GITHUB_USERNAME.github.io/portfolio",
+  "homepage": "https://Excidium-MP.github.io/my-site",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
