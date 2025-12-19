@@ -25,13 +25,8 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            {/* Logo */}
-            <Link to="/" className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-              Excidium-MP
-            </Link>
-
-            {/* Desktop Navigation */}
+          <div className="flex items-center justify-center h-16 relative">
+            {/* Desktop Navigation - Centered */}
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
@@ -48,8 +43,8 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
               ))}
             </div>
 
-            {/* Dark Mode Toggle & Mobile Menu Button */}
-            <div className="flex items-center space-x-4">
+            {/* Dark Mode Toggle & Mobile Menu Button - Absolute Right */}
+            <div className="absolute right-0 flex items-center space-x-4">
               <button
                 onClick={toggleDarkMode}
                 className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
@@ -83,6 +78,13 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
                 )}
               </button>
             </div>
+          </div>
+
+          {/* Name Title - Below Navigation */}
+          <div className="hidden md:block text-center pb-3">
+            <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+              Manuel Palli
+            </h2>
           </div>
 
           {/* Mobile Menu */}
