@@ -20,12 +20,23 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
 
   const isActive = (path: string) => location.pathname === path
 
+  const isHomePage = location.pathname === '/'
+
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
       {/* Header */}
       <header className="fixed top-0 left-0 right-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16 relative">
+            {/* Name in top-left corner (only on non-home pages) */}
+            {!isHomePage && (
+              <div className="absolute left-0 hidden md:block">
+                <Link to="/" className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+                  Manuel Palli
+                </Link>
+              </div>
+            )}
+
             {/* Desktop Navigation - Centered */}
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
@@ -80,12 +91,14 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
             </div>
           </div>
 
-          {/* Name Title - Below Navigation */}
-          <div className="hidden md:block text-center pb-3">
-            <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-              Manuel Palli
-            </h2>
-          </div>
+          {/* Name Title - Below Navigation (only on home page) */}
+          {isHomePage && (
+            <div className="hidden md:block text-center pb-3">
+              <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+                Manuel Palli
+              </h2>
+            </div>
+          )}
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
