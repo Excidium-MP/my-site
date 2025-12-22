@@ -14,7 +14,7 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
-    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'Projects', path: '/projects' },
     { name: 'Contact', path: '/contact' }
   ]
 
@@ -91,14 +91,6 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
             </div>
           </div>
 
-          {/* Name Title - Below Navigation (only on home page) */}
-          {isHomePage && (
-            <div className="hidden md:block text-center pb-3">
-              <h2 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
-                Manuel Palli
-              </h2>
-            </div>
-          )}
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
