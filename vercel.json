@@ -1,8 +1,13 @@
 {
-  "framework": "vite",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
   "installCommand": "npm install",
+  "framework": "vite",
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "build": {
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
 }
