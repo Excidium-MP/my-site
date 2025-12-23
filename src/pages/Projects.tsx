@@ -31,20 +31,21 @@ function Projects() {
       id: 1,
       title: "E-Commerce",
       description: "Online shopping platforms and digital marketplaces",
-      gradient: "from-accent-500 to-accent-600",
-      darkGradient: "dark:from-accent-600 dark:to-accent-700",
+      gradient: "from-blue-500 to-blue-600",
+      darkGradient: "dark:from-blue-600 dark:to-blue-700",
       icon: "🛒",
       projects: [
         {
           name: "Jazmín Chebar – Innovative E-Commerce Feature Development",
-          description: "Working closely with an experienced Delivery Manager who handled client relations, I led the internal development team for Jazmín Chebar's fashion e-commerce platform. Focused on building innovative features that were cutting-edge at the time—such as personalized styling tools, advanced filtering, and seamless mobile experiences—that elevated the shopping journey for a premium fashion brand.",
+          description: "Working closely with an experienced Delivery Manager who handled client relations, I led the internal development team for Jazmín Chebar's fashion e-commerce platform. Focused on building innovative features that were cutting-edge at the time, such as personalized styling tools, advanced filtering, 3D Images, and so on that elevated the shopping journey for a premium fashion brand.",
           note: "Live site: www.jazminchebar.com.ar",
           video: "/Jazmin.mp4"
         },
         {
           name: "SommierCenter – E-Commerce Platform Migration & Feature Development",
-          description: "As the main PM for SommierCenter (a leading Argentine mattress and furniture retailer), I led the full migration from Magento 1 to Magento 2 (now Adobe Commerce). This upgrade improved performance, security, and scalability for high-traffic seasons. Post-migration, I managed ongoing feature development and marketing campaigns on a time-and-materials basis—delivering promotions, UX improvements, and checkout optimizations that supported consistent growth.",
-          note: "Live site: www.sommiercenter.com.ar"
+          description: "As the main PM for SommierCenter (a leading Argentine mattress and furniture retailer), I led the full migration from Magento 1 to Magento 2 (now Adobe Commerce). This upgrade improved performance, security, and scalability for high-traffic seasons. Post-migration, I managed ongoing feature development and marketing campaigns on a time-and-materials basis delivering promotions, UX improvements, and checkout optimizations that supported consistent growth.",
+          note: "Live site: www.sommiercenter.com.ar",
+          image: "/sommier-center.png"
         },
         {
           name: "Rex – Multi-Industry E-Commerce Transformation",
@@ -58,8 +59,8 @@ function Projects() {
       id: 2,
       title: "Custom Software",
       description: "Tailored software solutions for unique business needs",
-      gradient: "from-primary-600 to-accent-500",
-      darkGradient: "dark:from-primary-700 dark:to-accent-600",
+      gradient: "from-teal-500 to-teal-600",
+      darkGradient: "dark:from-teal-600 dark:to-teal-700",
       icon: "⚙️",
       projects: [
         {
@@ -84,8 +85,8 @@ function Projects() {
       id: 3,
       title: "Video Games",
       description: "Gaming experiences and interactive entertainment",
-      gradient: "from-accent-600 to-primary-500",
-      darkGradient: "dark:from-accent-700 dark:to-primary-600",
+      gradient: "from-indigo-500 to-indigo-600",
+      darkGradient: "dark:from-indigo-600 dark:to-indigo-700",
       icon: "🎮",
       projects: [
         {
@@ -106,8 +107,8 @@ function Projects() {
       id: 4,
       title: "Products",
       description: "Digital products and innovative solutions",
-      gradient: "from-primary-500 to-accent-500",
-      darkGradient: "dark:from-primary-600 dark:to-accent-600",
+      gradient: "from-emerald-500 to-emerald-600",
+      darkGradient: "dark:from-emerald-600 dark:to-emerald-700",
       icon: "📦",
       projects: []
     },
@@ -115,8 +116,8 @@ function Projects() {
       id: 5,
       title: "Entertainment",
       description: "Interactive experiences and entertainment solutions",
-      gradient: "from-primary-500 to-primary-600",
-      darkGradient: "dark:from-primary-600 dark:to-primary-700",
+      gradient: "from-purple-500 to-purple-600",
+      darkGradient: "dark:from-purple-600 dark:to-purple-700",
       icon: "🎭",
       projects: [
         {
