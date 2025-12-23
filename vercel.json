@@ -8,7 +8,14 @@
   "build": {
     "env": {
       "NODE_ENV": "production",
-      "NPM_CONFIG_PRODUCTION": "false"
+      "NPM_CONFIG_PRODUCTION": "false",
+      "VITE_BASE_URL": "/"
     }
-  }
+  },
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
 }
