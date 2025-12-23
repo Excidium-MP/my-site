@@ -25,7 +25,7 @@ function About() {
 
   return (
     <motion.div 
-      className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800 py-20 px-4"
+      className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-800 py-20 px-4"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
@@ -40,11 +40,11 @@ function About() {
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <motion.div 
-            className="w-48 h-48 bg-gradient-to-br from-gray-300 to-gray-400 dark:from-gray-700 dark:to-gray-600 rounded-full shadow-xl flex items-center justify-center"
+            className="w-48 h-48 bg-gradient-to-br from-primary-300 via-accent-300 to-primary-400 dark:from-primary-700 dark:via-accent-700 dark:to-primary-600 rounded-full shadow-xl flex items-center justify-center"
             whileHover={{ scale: 1.1, rotate: 5 }}
             transition={{ duration: 0.3 }}
           >
-            <svg className="w-24 h-24 text-gray-500 dark:text-gray-400" fill="currentColor" viewBox="0 0 20 20">
+            <svg className="w-24 h-24 text-white/80 dark:text-white/60" fill="currentColor" viewBox="0 0 20 20">
               <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
             </svg>
           </motion.div>
@@ -52,7 +52,7 @@ function About() {
 
         {/* Heading */}
         <motion.h1 
-          className="text-4xl md:text-5xl font-bold text-center mb-12 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl font-display font-bold text-center mb-12 bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
@@ -62,7 +62,7 @@ function About() {
 
         {/* Story Content */}
         <motion.div 
-          className="space-y-6 text-lg leading-relaxed text-gray-700 dark:text-gray-300"
+          className="space-y-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 font-light"
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -88,7 +88,7 @@ function About() {
           </motion.p>
 
           <motion.p 
-            className="pt-4 text-center text-xl font-semibold text-gray-900 dark:text-white"
+            className="pt-4 text-center text-xl font-semibold text-neutral-900 dark:text-white"
             variants={itemVariants}
           >
             Outside work, you'll find me training Jiu-Jitsu, cooking (Asados are my go-to), gaming, or enjoying family time as a proud dad.

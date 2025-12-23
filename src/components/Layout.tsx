@@ -23,15 +23,15 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
   const isHomePage = location.pathname === '/'
 
   return (
-    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200">
+    <div className="min-h-screen bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white transition-colors duration-200">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200 dark:border-gray-800 z-50">
+      <header className="fixed top-0 left-0 right-0 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-800 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16 relative">
             {/* Name in top-left corner (only on non-home pages) */}
             {!isHomePage && (
               <div className="absolute left-0 hidden md:block">
-                <Link to="/" className="text-xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+                <Link to="/" className="text-xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
                   Manuel Palli
                 </Link>
               </div>
@@ -43,10 +43,10 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
                 <Link
                   key={link.path}
                   to={link.path}
-                  className={`transition-colors hover:text-blue-600 dark:hover:text-blue-400 ${
+                  className={`transition-colors font-medium hover:text-primary-600 dark:hover:text-primary-400 ${
                     isActive(link.path)
-                      ? 'text-blue-600 dark:text-blue-400 font-semibold'
-                      : 'text-gray-700 dark:text-gray-300'
+                      ? 'text-primary-600 dark:text-primary-400 font-semibold'
+                      : 'text-neutral-700 dark:text-neutral-300'
                   }`}
                 >
                   {link.name}
@@ -58,7 +58,7 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
             <div className="absolute right-0 flex items-center space-x-4">
               <button
                 onClick={toggleDarkMode}
-                className="p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+                className="p-2 rounded-lg bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
                 aria-label="Toggle dark mode"
               >
                 {darkMode ? (
@@ -75,7 +75,7 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg bg-gray-200 dark:bg-gray-800 hover:bg-gray-300 dark:hover:bg-gray-700 transition-colors"
+                className="md:hidden p-2 rounded-lg bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
                 aria-label="Toggle mobile menu"
               >
                 {mobileMenuOpen ? (
@@ -94,7 +94,7 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
 
           {/* Mobile Menu */}
           {mobileMenuOpen && (
-            <div className="md:hidden py-4 border-t border-gray-200 dark:border-gray-800">
+            <div className="md:hidden py-4 border-t border-neutral-200 dark:border-neutral-800">
               {navLinks.map((link) => (
                 <Link
                   key={link.path}
@@ -102,8 +102,8 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block py-2 px-4 rounded-lg transition-colors ${
                     isActive(link.path)
-                      ? 'bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 font-semibold'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
+                      ? 'bg-primary-100 dark:bg-primary-900/30 text-primary-600 dark:text-primary-400 font-semibold'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-800'
                   }`}
                 >
                   {link.name}
@@ -120,9 +120,9 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
       </main>
 
       {/* Footer */}
-      <footer className="bg-gray-50 dark:bg-gray-950 border-t border-gray-200 dark:border-gray-800 py-8 mt-20">
+      <footer className="bg-neutral-50 dark:bg-neutral-950 border-t border-neutral-200 dark:border-neutral-800 py-8 mt-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className="text-neutral-600 dark:text-neutral-400">
             Built with ❤️ in Buenos Aires • {new Date().getFullYear()}
           </p>
         </div>

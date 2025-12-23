@@ -29,8 +29,8 @@ function Projects() {
       id: 1,
       title: "Entertainment",
       description: "Interactive experiences and entertainment solutions",
-      gradient: "from-pink-500 to-rose-500",
-      darkGradient: "dark:from-pink-600 dark:to-rose-600",
+      gradient: "from-primary-500 to-primary-600",
+      darkGradient: "dark:from-primary-600 dark:to-primary-700",
       icon: "🎭",
       projects: [
         {
@@ -44,8 +44,8 @@ function Projects() {
       id: 2,
       title: "E-Commerce",
       description: "Online shopping platforms and digital marketplaces",
-      gradient: "from-blue-500 to-cyan-500",
-      darkGradient: "dark:from-blue-600 dark:to-cyan-600",
+      gradient: "from-accent-500 to-accent-600",
+      darkGradient: "dark:from-accent-600 dark:to-accent-700",
       icon: "🛒",
       projects: [
         {
@@ -66,8 +66,8 @@ function Projects() {
       id: 3,
       title: "Custom Software",
       description: "Tailored software solutions for unique business needs",
-      gradient: "from-purple-500 to-indigo-500",
-      darkGradient: "dark:from-purple-600 dark:to-indigo-600",
+      gradient: "from-primary-600 to-accent-500",
+      darkGradient: "dark:from-primary-700 dark:to-accent-600",
       icon: "⚙️",
       projects: [
         {
@@ -92,8 +92,8 @@ function Projects() {
       id: 4,
       title: "Video Games",
       description: "Gaming experiences and interactive entertainment",
-      gradient: "from-green-500 to-emerald-500",
-      darkGradient: "dark:from-green-600 dark:to-emerald-600",
+      gradient: "from-accent-600 to-primary-500",
+      darkGradient: "dark:from-accent-700 dark:to-primary-600",
       icon: "🎮",
       projects: [
         {
@@ -114,8 +114,8 @@ function Projects() {
       id: 5,
       title: "Products",
       description: "Digital products and innovative solutions",
-      gradient: "from-orange-500 to-amber-500",
-      darkGradient: "dark:from-orange-600 dark:to-amber-600",
+      gradient: "from-primary-500 to-accent-500",
+      darkGradient: "dark:from-primary-600 dark:to-accent-600",
       icon: "📦",
       projects: []
     }
@@ -137,10 +137,10 @@ function Projects() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-blue-600 to-purple-600 dark:from-blue-400 dark:to-purple-400 bg-clip-text text-transparent">
+          <h1 className="text-4xl md:text-6xl font-display font-bold mb-4 bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent">
             Projects
           </h1>
-          <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
+          <p className="text-lg text-neutral-600 dark:text-neutral-400 max-w-2xl mx-auto">
             Explore my work across different categories
           </p>
         </motion.div>
