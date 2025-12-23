@@ -64,20 +64,20 @@ function Projects() {
       icon: "⚙️",
       projects: [
         {
-          name: "AR Interactive Panel",
-          description: "Augmented reality interactive panel for tradeshows"
+          name: "AR Interactive Panel – Unity-Based Interactive Experience",
+          description: "Developed a Unity-based interactive panel featuring augmented reality capabilities that mapped physical movements with target image recognition. This solution enabled real-time object manipulation—allowing users to rotate physical objects and see corresponding digital representations displayed on screen, creating an immersive experience for trade show attendees."
         },
         {
-          name: "AR Experiences For Products",
-          description: "Product visualization using augmented reality"
+          name: "AR Product Experiences – Web-Based AR Solutions",
+          description: "Delivered multiple web-based augmented reality projects using 8th Wall technology to showcase products in innovative and interactive ways. These AR experiences provided engaging product visualization for trade show attendees, enabling them to interact with digital product models in real-world environments through their mobile devices."
         },
         {
-          name: "Mobile Clients Loyalty App",
-          description: "Customer loyalty and rewards mobile application"
+          name: "Mobile Customer Loyalty App – Healthcare Provider Solution",
+          description: "Led the end-to-end delivery of a native mobile loyalty application for a major healthcare provider in Mexico, published on both the App Store and Google Play Store. The app featured comprehensive customer engagement tools, rewards programs, and gamification elements designed to enhance user experience and incentivize continued platform usage."
         },
         {
-          name: "Tradeshows/Events Hub",
-          description: "Centralized platform for managing events and tradeshows"
+          name: "Trade Show & Event Hub – Customizable Event Management Platform",
+          description: "Developed a comprehensive web and mobile application platform with modular architecture for trade shows and corporate events. The solution featured attendee registration with unique QR code access, networking capabilities, meeting scheduling, personalized agenda management for panels and workshops, and robust gamification modules including trivia competitions, scavenger hunts, and various prize giveaway mechanics. While not a full SaaS product, the platform's modular design enabled rapid customization for different clients and event types."
         }
       ]
     },
