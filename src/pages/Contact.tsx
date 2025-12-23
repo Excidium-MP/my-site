@@ -35,13 +35,7 @@ function Contact() {
   }
 
   return (
-    <motion.div 
-      className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-800 py-20 px-4"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-800 py-20 px-4">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -230,7 +224,7 @@ function Contact() {
           <span className="text-primary-500 dark:text-primary-400 text-4xl font-display font-bold">{'}'}</span>
         </motion.div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { motion, Variants } from 'framer-motion'
 
 function Home() {
@@ -36,13 +35,7 @@ function Home() {
   }
 
   return (
-    <motion.div 
-      className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-800"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-800">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
@@ -79,18 +72,18 @@ function Home() {
               className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4"
               variants={itemVariants}
             >
-              <Link 
-                to="/portfolio"
+              <a 
+                href="#projects"
                 className="px-8 py-4 bg-primary-600 hover:bg-primary-700 dark:bg-primary-500 dark:hover:bg-primary-600 text-white rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary-500/20"
               >
                 View Portfolio
-              </Link>
-              <Link 
-                to="/contact"
+              </a>
+              <a 
+                href="#contact"
                 className="px-8 py-4 bg-neutral-200 hover:bg-neutral-300 dark:bg-neutral-800 dark:hover:bg-neutral-700 text-neutral-900 dark:text-white rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-xl"
               >
                 Get in Touch
-              </Link>
+              </a>
               <a 
                 href="https://www.linkedin.com/in/manuelpalli/"
                 target="_blank"
@@ -124,7 +117,7 @@ function Home() {
           </motion.div>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

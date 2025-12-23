@@ -1,5 +1,4 @@
-import { useState } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 
 interface LayoutProps {
   children: React.ReactNode
@@ -9,18 +8,39 @@ interface LayoutProps {
 
 function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-  const location = useLocation()
+  const [activeSection, setActiveSection] = useState('home')
 
   const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
-    { name: 'Projects', path: '/projects' },
-    { name: 'Contact', path: '/contact' }
+    { name: 'Home', path: '#home' },
+    { name: 'About', path: '#about' },
+    { name: 'Projects', path: '#projects' },
+    { name: 'Contact', path: '#contact' }
   ]
 
-  const isActive = (path: string) => location.pathname === path
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = ['home', 'about', 'projects', 'contact']
+      const scrollPosition = window.scrollY + 100
 
-  const isHomePage = location.pathname === '/'
+      for (const section of sections) {
+        const element = document.getElementById(section)
+        if (element) {
+          const offsetTop = element.offsetTop
+          const offsetBottom = offsetTop + element.offsetHeight
+          if (scrollPosition >= offsetTop && scrollPosition < offsetBottom) {
+            setActiveSection(section)
+            break
+          }
+        }
+      }
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    handleScroll()
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  const isActive = (path: string) => `#${activeSection}` === path
 
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white transition-colors duration-200">
@@ -28,21 +48,19 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
       <header className="fixed top-0 left-0 right-0 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-800 z-50">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16 relative">
-            {/* Name in top-left corner (only on non-home pages) */}
-            {!isHomePage && (
-              <div className="absolute left-0 hidden md:block">
-                <Link to="/" className="text-xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
-                  Manuel Palli
-                </Link>
-              </div>
-            )}
+            {/* Name in top-left corner */}
+            <div className="absolute left-0 hidden md:block">
+              <a href="#home" className="text-xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+                Manuel Palli
+              </a>
+            </div>
 
             {/* Desktop Navigation - Centered */}
             <div className="hidden md:flex items-center space-x-8">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   className={`transition-colors font-medium hover:text-primary-600 dark:hover:text-primary-400 ${
                     isActive(link.path)
                       ? 'text-primary-600 dark:text-primary-400 font-semibold'
@@ -50,7 +68,7 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
                   }`}
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
             </div>
 
@@ -96,9 +114,9 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
           {mobileMenuOpen && (
             <div className="md:hidden py-4 border-t border-neutral-200 dark:border-neutral-800">
               {navLinks.map((link) => (
-                <Link
+                <a
                   key={link.path}
-                  to={link.path}
+                  href={link.path}
                   onClick={() => setMobileMenuOpen(false)}
                   className={`block py-2 px-4 rounded-lg transition-colors ${
                     isActive(link.path)
@@ -107,7 +125,7 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
                   }`}
                 >
                   {link.name}
-                </Link>
+                </a>
               ))}
             </div>
           )}

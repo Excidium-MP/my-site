@@ -122,13 +122,7 @@ function Projects() {
   ]
 
   return (
-    <motion.div 
-      className="min-h-screen py-20 px-4 sm:px-6 lg:px-8"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div 
@@ -263,7 +257,7 @@ function Projects() {
           ))}
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 
