@@ -35,7 +35,7 @@ function Home() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-800">
+    <div className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-primary-100 via-primary-50 to-white dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-800 transition-colors duration-1000">
       <div className="max-w-6xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Left Column - Text Content */}
@@ -43,7 +43,8 @@ function Home() {
             className="text-center md:text-left space-y-6"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
           >
             <motion.h2 
               className="text-3xl md:text-4xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent"
@@ -103,7 +104,8 @@ function Home() {
             className="flex justify-center md:justify-end"
             variants={imageVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.3 }}
           >
             <motion.div 
               className="w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 bg-gradient-to-br from-primary-300 via-accent-300 to-primary-400 dark:from-primary-700 dark:via-accent-700 dark:to-primary-600 rounded-full shadow-2xl flex items-center justify-center"

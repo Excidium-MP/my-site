@@ -122,13 +122,14 @@ function Projects() {
   ]
 
   return (
-    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8">
+    <div className="min-h-screen py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-neutral-100 via-neutral-50 to-white dark:from-neutral-800 dark:via-neutral-850 dark:to-neutral-900 transition-colors duration-1000">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <motion.div 
           className="text-center mb-16"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h1 className="text-4xl md:text-6xl font-display font-bold mb-4 bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent">
@@ -146,7 +147,8 @@ function Projects() {
               key={category.id}
               className={`relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-300 bg-gradient-to-r ${category.gradient} ${category.darkGradient}`}
               initial={{ opacity: 0, x: -50 }}
-              animate={{ opacity: 1, x: 0 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ 
                 duration: 0.5, 
                 delay: index * 0.1,

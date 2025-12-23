@@ -35,13 +35,14 @@ function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-800 py-20 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-primary-100 via-white to-accent-100 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-850 py-20 px-4 transition-colors duration-1000">
       <div className="max-w-6xl mx-auto">
         {/* Header */}
         <motion.div 
           className="mb-12"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
@@ -65,7 +66,8 @@ function Contact() {
             className="space-y-8"
             variants={containerVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             {/* GitHub */}
             <motion.a 
@@ -141,7 +143,8 @@ function Contact() {
             className="bg-white dark:bg-neutral-800 rounded-lg shadow-xl p-8"
             variants={formVariants}
             initial="hidden"
-            animate="visible"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.2 }}
           >
             <form className="space-y-6">
               {/* Email Field */}
@@ -218,8 +221,9 @@ function Contact() {
         <motion.div 
           className="mt-8"
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.8, duration: 0.5 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ delay: 0.3, duration: 0.5 }}
         >
           <span className="text-primary-500 dark:text-primary-400 text-4xl font-display font-bold">{'}'}</span>
         </motion.div>

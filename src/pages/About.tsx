@@ -24,13 +24,14 @@ function About() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-white to-accent-50 dark:from-neutral-900 dark:via-neutral-900 dark:to-neutral-800 py-20 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-accent-100 via-accent-50 to-white dark:from-neutral-900 dark:via-neutral-850 dark:to-neutral-800 py-20 px-4 transition-colors duration-1000">
       <div className="max-w-4xl mx-auto">
         {/* Optional Photo Placeholder */}
         <motion.div 
           className="flex justify-center mb-12"
           initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
           <motion.div 
@@ -48,7 +49,8 @@ function About() {
         <motion.h1 
           className="text-4xl md:text-5xl font-display font-bold text-center mb-12 bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
         >
           About Me
@@ -59,7 +61,8 @@ function About() {
           className="space-y-6 text-lg leading-relaxed text-neutral-700 dark:text-neutral-300 font-light"
           variants={containerVariants}
           initial="hidden"
-          animate="visible"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
         >
           <motion.p variants={itemVariants}>
             I'm a 37-year-old Project and Product Manager based in Buenos Aires, Argentina, deeply passionate about technology, games, AI and how people interact with both.
