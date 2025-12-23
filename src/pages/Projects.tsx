@@ -27,21 +27,6 @@ function Projects() {
   const categories: Category[] = [
     {
       id: 1,
-      title: "Entertainment",
-      description: "Interactive experiences and entertainment solutions",
-      gradient: "from-primary-500 to-primary-600",
-      darkGradient: "dark:from-primary-600 dark:to-primary-700",
-      icon: "🎭",
-      projects: [
-        {
-          name: "Social and Corporate Events",
-          description: "I worked in all kind of social and corporate events",
-          note: "Images coming soon"
-        }
-      ]
-    },
-    {
-      id: 2,
       title: "E-Commerce",
       description: "Online shopping platforms and digital marketplaces",
       gradient: "from-accent-500 to-accent-600",
@@ -49,21 +34,24 @@ function Projects() {
       icon: "🛒",
       projects: [
         {
-          name: "Sommier Center",
-          description: "E-commerce platform for mattresses and bedding"
+          name: "SommierCenter – E-Commerce Platform Migration & Feature Development",
+          description: "As the main PM for SommierCenter (a leading Argentine mattress and furniture retailer), I led the full migration from Magento 1 to Magento 2 (now Adobe Commerce). This upgrade improved performance, security, and scalability for high-traffic seasons. Post-migration, I managed ongoing feature development and marketing campaigns on a time-and-materials basis—delivering promotions, UX improvements, and checkout optimizations that supported consistent growth.",
+          note: "Live site: www.sommiercenter.com.ar"
         },
         {
-          name: "Jazmin Chebar",
-          description: "Fashion e-commerce solution"
+          name: "Jazmín Chebar – Innovative E-Commerce Feature Development",
+          description: "Working closely with an experienced Delivery Manager who handled client relations, I led the internal development team for Jazmín Chebar's fashion e-commerce platform. Focused on building innovative features that were cutting-edge at the time—such as personalized styling tools, advanced filtering, and seamless mobile experiences—that elevated the shopping journey for a premium fashion brand.",
+          note: "Live site: www.jazminchebar.com.ar"
         },
         {
-          name: "Pinturerias Rex",
-          description: "Online store for paint and hardware products"
+          name: "Rex – Multi-Industry E-Commerce Transformation",
+          description: "Supported Rex's strategic pivot from a traditional paint retailer to a broad multi-industry e-commerce platform, expanding from home improvement products to tech gadgets, appliances, and more. Managed roadmap, feature prioritization, and cross-functional delivery to create a unified, scalable online store that reflected the brand's new 'everything you need' positioning.",
+          note: "Live site: somosrex.com"
         }
       ]
     },
     {
-      id: 3,
+      id: 2,
       title: "Custom Software",
       description: "Tailored software solutions for unique business needs",
       gradient: "from-primary-600 to-accent-500",
@@ -89,7 +77,7 @@ function Projects() {
       ]
     },
     {
-      id: 4,
+      id: 3,
       title: "Video Games",
       description: "Gaming experiences and interactive entertainment",
       gradient: "from-accent-600 to-primary-500",
@@ -111,13 +99,28 @@ function Projects() {
       ]
     },
     {
-      id: 5,
+      id: 4,
       title: "Products",
       description: "Digital products and innovative solutions",
       gradient: "from-primary-500 to-accent-500",
       darkGradient: "dark:from-primary-600 dark:to-accent-600",
       icon: "📦",
       projects: []
+    },
+    {
+      id: 5,
+      title: "Entertainment",
+      description: "Interactive experiences and entertainment solutions",
+      gradient: "from-primary-500 to-primary-600",
+      darkGradient: "dark:from-primary-600 dark:to-primary-700",
+      icon: "🎭",
+      projects: [
+        {
+          name: "Social and Corporate Events",
+          description: "I worked in all kind of social and corporate events",
+          note: "Images coming soon"
+        }
+      ]
     }
   ]
 
