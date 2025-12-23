@@ -5,6 +5,7 @@ interface Project {
   name: string
   description: string
   note?: string
+  image?: string
 }
 
 interface Category {
@@ -46,7 +47,8 @@ function Projects() {
         {
           name: "Rex – Multi-Industry E-Commerce Transformation",
           description: "Supported Rex's strategic pivot from a traditional paint retailer to a broad multi-industry e-commerce platform, expanding from home improvement products to tech gadgets, appliances, and more. Managed roadmap, feature prioritization, and cross-functional delivery to create a unified, scalable online store that reflected the brand's new 'everything you need' positioning.",
-          note: "Live site: somosrex.com"
+          note: "Live site: somosrex.com",
+          image: "/rex.png"
         }
       ]
     },
@@ -234,6 +236,15 @@ function Projects() {
                             <p className="text-white/70 text-sm italic mt-2">
                               {project.note}
                             </p>
+                          )}
+                          {project.image && (
+                            <div className="mt-4 rounded-lg overflow-hidden shadow-lg">
+                              <img 
+                                src={project.image} 
+                                alt={project.name}
+                                className="w-full h-auto object-cover"
+                              />
+                            </div>
                           )}
                         </motion.div>
                       ))}
