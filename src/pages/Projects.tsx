@@ -6,6 +6,7 @@ interface Project {
   description: string
   note?: string
   image?: string
+  video?: string
 }
 
 interface Category {
@@ -35,14 +36,15 @@ function Projects() {
       icon: "🛒",
       projects: [
         {
+          name: "Jazmín Chebar – Innovative E-Commerce Feature Development",
+          description: "Working closely with an experienced Delivery Manager who handled client relations, I led the internal development team for Jazmín Chebar's fashion e-commerce platform. Focused on building innovative features that were cutting-edge at the time—such as personalized styling tools, advanced filtering, and seamless mobile experiences—that elevated the shopping journey for a premium fashion brand.",
+          note: "Live site: www.jazminchebar.com.ar",
+          video: "/Jazmin.mp4"
+        },
+        {
           name: "SommierCenter – E-Commerce Platform Migration & Feature Development",
           description: "As the main PM for SommierCenter (a leading Argentine mattress and furniture retailer), I led the full migration from Magento 1 to Magento 2 (now Adobe Commerce). This upgrade improved performance, security, and scalability for high-traffic seasons. Post-migration, I managed ongoing feature development and marketing campaigns on a time-and-materials basis—delivering promotions, UX improvements, and checkout optimizations that supported consistent growth.",
           note: "Live site: www.sommiercenter.com.ar"
-        },
-        {
-          name: "Jazmín Chebar – Innovative E-Commerce Feature Development",
-          description: "Working closely with an experienced Delivery Manager who handled client relations, I led the internal development team for Jazmín Chebar's fashion e-commerce platform. Focused on building innovative features that were cutting-edge at the time—such as personalized styling tools, advanced filtering, and seamless mobile experiences—that elevated the shopping journey for a premium fashion brand.",
-          note: "Live site: www.jazminchebar.com.ar"
         },
         {
           name: "Rex – Multi-Industry E-Commerce Transformation",
@@ -244,6 +246,17 @@ function Projects() {
                                 alt={project.name}
                                 className="w-full h-auto object-cover"
                               />
+                            </div>
+                          )}
+                          {project.video && (
+                            <div className="mt-4 rounded-lg overflow-hidden shadow-lg">
+                              <video 
+                                src={project.video}
+                                controls
+                                className="w-full h-auto"
+                              >
+                                Your browser does not support the video tag.
+                              </video>
                             </div>
                           )}
                         </motion.div>
