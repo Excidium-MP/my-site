@@ -20,7 +20,7 @@ interface Category {
 }
 
 function Projects() {
-  const [expandedCategory, setExpandedCategory] = useState<number | null>(null)
+  const [expandedCategory, setExpandedCategory] = useState<number | null>(1)
 
   const toggleCategory = (id: number) => {
     setExpandedCategory(expandedCategory === id ? null : id)
