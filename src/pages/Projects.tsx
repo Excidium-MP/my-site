@@ -83,23 +83,23 @@ function Projects() {
     },
     {
       id: 3,
-      title: "Video Games",
-      description: "Gaming experiences and interactive entertainment",
+      title: "Entertainment & Games",
+      description: "Interactive experiences, games, and immersive entertainment solutions",
       gradient: "from-indigo-500 to-indigo-600",
       darkGradient: "dark:from-indigo-600 dark:to-indigo-700",
       icon: "🎮",
       projects: [
         {
-          name: "Unity",
-          description: "Game development using Unity engine"
+          name: "Unity Interactive Panels – Trade Show Technology Solutions",
+          description: "Developed executable Unity panels for trade shows where internet connectivity was limited or unavailable. Created innovative interactive experiences such as physical object recognition systems that displayed 3D models on screens, allowing attendees to place items on designated surfaces and interact with their digital representations by rotating and exploring them from all angles. Also built touch-based web and Unity panels featuring intuitive navigation through animations and videos, providing engaging product showcases and information delivery systems for various clients across multiple international venues."
         },
         {
-          name: "VR",
-          description: "Virtual reality experiences and applications"
+          name: "Trade Show Games & Marketing Activations",
+          description: "Developed numerous games and interactive experiences to showcase products and entertain attendees at trade shows and marketing activations worldwide. Worked with diverse technologies including Unity, web-based solutions, VR/AR platforms, motion sensors, and custom hardware integrations. These projects combined software and hardware to create memorable experiences that effectively communicated brand messages while providing entertainment value, resulting in increased booth traffic and enhanced brand engagement across Argentina and international venues.\n\nJurassic World III – Spain Mall Tour:\nFor the Jurassic World III promotional tour across 10+ major malls in Spain, we developed two exciting experiences:\n\n• Maze Runner Game: Developed an exciting Maze Runner-style game using Leap Motion sensor technology. The experience allowed attendees to control a dinosaur using hand movements, running through obstacles and dodging various objects. This gesture-based interaction created an immersive and entertaining experience that drew large crowds and generated significant engagement for the movie launch.\n\n• VR Helicopter Experience: Created a fully immersive VR experience featuring a helicopter ride through the city of Malta, where parts of the movie were filmed. Players had to navigate and land the helicopter on the island while seated in motion-enabled chairs with vibration feedback. The project involved complete 3D game development and hardware integration, delivering a thrilling multi-sensory experience that transported attendees into the world of Jurassic World."
         },
         {
-          name: "Leap Motion",
-          description: "Hand tracking and gesture-based interactions"
+          name: "TRIPP – VR Wellness & Meditation App",
+          description: "Worked for almost 2 years on TRIPP, an innovative VR wellness and meditation application available across VR devices and mobile platforms. Contributed to the release of new immersive content and experiences. Most notably, played a key role in the launch of TRIPP on the Apple Vision Pro device, being part of the team that brought the app to Apple's groundbreaking spatial computing platform. This experience provided invaluable insight into launching products on cutting-edge hardware and being part of a major Apple product ecosystem launch."
         }
       ]
     },

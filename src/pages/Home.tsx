@@ -96,6 +96,16 @@ function Home() {
                 </svg>
                 LinkedIn
               </a>
+              <a 
+                href="/Manuel-Palli-Resume-2025.pdf"
+                download
+                className="px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-700 hover:to-accent-700 dark:from-primary-500 dark:to-accent-500 dark:hover:from-primary-600 dark:hover:to-accent-600 text-white rounded-xl font-semibold transition-all hover:scale-105 hover:shadow-xl hover:shadow-primary-500/20 flex items-center justify-center gap-2"
+              >
+                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                </svg>
+                Download Resume
+              </a>
             </motion.div>
           </motion.div>
           
