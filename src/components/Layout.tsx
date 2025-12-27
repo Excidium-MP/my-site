@@ -14,12 +14,13 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
     { name: 'Home', path: '#home' },
     { name: 'About', path: '#about' },
     { name: 'Projects', path: '#projects' },
+    { name: 'Tools', path: '#tools' },
     { name: 'Contact', path: '#contact' }
   ]
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'contact']
+      const sections = ['home', 'about', 'projects', 'tools', 'contact']
       const scrollPosition = window.scrollY + 100
 
       for (const section of sections) {
