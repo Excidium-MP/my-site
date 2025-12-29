@@ -139,11 +139,17 @@ function Tools() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-accent-100 via-accent-50 to-white dark:from-neutral-900 dark:via-neutral-850 dark:to-neutral-800 py-20 px-4 transition-colors duration-1000">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-accent-50 to-white dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-800 py-20 px-4 transition-colors duration-1000 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/3 left-1/4 w-96 h-96 bg-primary-400/10 dark:bg-primary-500/5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-accent-400/10 dark:bg-accent-500/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Heading */}
         <motion.h1 
-          className="text-4xl md:text-5xl font-display font-bold text-center mb-6 bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl font-display font-bold text-center mb-6 bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 dark:from-primary-400 dark:via-accent-400 dark:to-accent-300 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -215,7 +221,7 @@ function Tools() {
                         <img 
                           src={tool.icon} 
                           alt={`${tool.name} icon`}
-                          className="w-full h-full object-contain filter dark:invert dark:brightness-0 dark:contrast-200 opacity-70 group-hover:opacity-100 transition-opacity duration-300"
+                          className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-all duration-300 brightness-0 saturate-100 invert-[0.3] dark:invert-[0.85]"
                         />
                       </div>
 

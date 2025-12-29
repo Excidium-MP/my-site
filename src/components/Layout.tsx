@@ -46,12 +46,12 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
   return (
     <div className="min-h-screen bg-white dark:bg-neutral-900 text-neutral-900 dark:text-white transition-colors duration-200">
       {/* Header */}
-      <header className="fixed top-0 left-0 right-0 bg-white/80 dark:bg-neutral-900/80 backdrop-blur-sm border-b border-neutral-200 dark:border-neutral-800 z-50">
+      <header className="fixed top-0 left-0 right-0 bg-white/90 dark:bg-neutral-900/90 backdrop-blur-md border-b border-neutral-200/50 dark:border-neutral-800/50 z-50 shadow-sm">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-center h-16 relative">
             {/* Name in top-left corner */}
             <div className="absolute left-0 hidden md:block">
-              <a href="#home" className="text-xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
+              <a href="#home" className="text-xl font-display font-bold bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 dark:from-primary-400 dark:via-accent-400 dark:to-accent-300 bg-clip-text text-transparent hover:opacity-80 transition-opacity">
                 Manuel Palli
               </a>
             </div>
@@ -62,13 +62,16 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
                 <a
                   key={link.path}
                   href={link.path}
-                  className={`transition-colors font-medium hover:text-primary-600 dark:hover:text-primary-400 ${
+                  className={`transition-all duration-300 font-medium relative group ${
                     isActive(link.path)
                       ? 'text-primary-600 dark:text-primary-400 font-semibold'
-                      : 'text-neutral-700 dark:text-neutral-300'
+                      : 'text-neutral-700 dark:text-neutral-300 hover:text-primary-600 dark:hover:text-primary-400'
                   }`}
                 >
                   {link.name}
+                  <span className={`absolute -bottom-1 left-0 h-0.5 bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 transition-all duration-300 ${
+                    isActive(link.path) ? 'w-full' : 'w-0 group-hover:w-full'
+                  }`}></span>
                 </a>
               ))}
             </div>
@@ -77,7 +80,7 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
             <div className="absolute right-0 flex items-center space-x-4">
               <button
                 onClick={toggleDarkMode}
-                className="p-2 rounded-lg bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+                className="p-2 rounded-xl bg-neutral-100 dark:bg-neutral-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 border border-neutral-200 dark:border-neutral-700"
                 aria-label="Toggle dark mode"
               >
                 {darkMode ? (
@@ -94,7 +97,7 @@ function Layout({ children, darkMode, toggleDarkMode }: LayoutProps) {
               {/* Mobile Menu Button */}
               <button
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                className="md:hidden p-2 rounded-lg bg-neutral-200 dark:bg-neutral-800 hover:bg-neutral-300 dark:hover:bg-neutral-700 transition-colors"
+                className="md:hidden p-2 rounded-xl bg-neutral-100 dark:bg-neutral-800 hover:bg-primary-100 dark:hover:bg-primary-900/30 hover:text-primary-600 dark:hover:text-primary-400 transition-all duration-300 border border-neutral-200 dark:border-neutral-700"
                 aria-label="Toggle mobile menu"
               >
                 {mobileMenuOpen ? (

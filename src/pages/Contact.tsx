@@ -35,8 +35,14 @@ function Contact() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-100 via-white to-accent-100 dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-850 py-20 px-4 transition-colors duration-1000">
-      <div className="max-w-6xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-accent-50 to-white dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-800 py-20 px-4 transition-colors duration-1000 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-primary-400/10 dark:bg-primary-500/5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-accent-400/10 dark:bg-accent-500/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '3s' }}></div>
+      </div>
+
+      <div className="max-w-6xl mx-auto relative z-10">
         {/* Header */}
         <motion.div 
           className="mb-12"
@@ -45,16 +51,15 @@ function Contact() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.6, ease: "easeOut" }}
         >
-          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4">
-            <span className="text-accent-500 dark:text-accent-400">CONTACT</span>
-            <span className="text-primary-500 dark:text-primary-400 ml-2">{'{'}</span>
+          <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 dark:from-primary-400 dark:via-accent-400 dark:to-accent-300 bg-clip-text text-transparent">
+            Let's Connect
           </h1>
           <div className="space-y-2">
-            <h2 className="text-2xl md:text-3xl font-display font-semibold text-primary-600 dark:text-primary-400">
+            <h2 className="text-2xl md:text-3xl font-display font-semibold text-neutral-900 dark:text-white">
               Have a project in mind?
             </h2>
-            <p className="text-lg text-neutral-700 dark:text-neutral-300">
-              My inbox is always open for new opportunities.
+            <p className="text-lg text-neutral-600 dark:text-neutral-400">
+              My inbox is always open for new opportunities and collaborations.
             </p>
           </div>
         </motion.div>

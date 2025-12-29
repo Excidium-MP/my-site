@@ -62,7 +62,7 @@ function About() {
       location: "Buenos Aires, Argentina (Remote)",
       description: "Grupo Sarapura produces corporate and social events across Argentina and South America. In my role, I handled overall direction, coordination, control, and execution of events for clients, managing a mixed team of lighting, sound, and video technicians alongside aspects like catering, setting, etc. I also directed client relationships, building solid partnerships with strategic industry and media companies to keep collaborations strong and on track."
     }
-  ]
+  ].reverse()
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -87,30 +87,17 @@ function About() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-accent-100 via-accent-50 to-white dark:from-neutral-900 dark:via-neutral-850 dark:to-neutral-800 py-20 px-4 transition-colors duration-1000">
-      <div className="max-w-4xl mx-auto">
-        {/* Optional Photo Placeholder */}
-        <motion.div 
-          className="flex justify-center mb-12"
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
-          <motion.div 
-            className="w-48 h-48 bg-gradient-to-br from-primary-300 via-accent-300 to-primary-400 dark:from-primary-700 dark:via-accent-700 dark:to-primary-600 rounded-full shadow-xl flex items-center justify-center"
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ duration: 0.3 }}
-          >
-            <svg className="w-24 h-24 text-white/80 dark:text-white/60" fill="currentColor" viewBox="0 0 20 20">
-              <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-            </svg>
-          </motion.div>
-        </motion.div>
+    <div className="min-h-screen bg-gradient-to-br from-primary-50 via-accent-50 to-white dark:from-neutral-950 dark:via-neutral-900 dark:to-neutral-800 py-20 px-4 transition-colors duration-1000 relative overflow-hidden">
+      {/* Animated background elements */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/3 right-1/4 w-96 h-96 bg-primary-400/10 dark:bg-primary-500/5 rounded-full blur-3xl animate-float"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-96 h-96 bg-accent-400/10 dark:bg-accent-500/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
+      </div>
 
+      <div className="max-w-4xl mx-auto relative z-10">
         {/* Heading */}
         <motion.h1 
-          className="text-4xl md:text-5xl font-display font-bold text-center mb-12 bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent"
+          className="text-4xl md:text-5xl font-display font-bold text-center mb-12 bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 dark:from-primary-400 dark:via-accent-400 dark:to-accent-300 bg-clip-text text-transparent"
           initial={{ opacity: 0, y: -20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
@@ -168,98 +155,185 @@ function About() {
           </h2>
 
           {/* Timeline Container */}
-          <div className="relative">
-            {/* Vertical Line */}
-            <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-400 via-accent-400 to-primary-400 dark:from-primary-600 dark:via-accent-600 dark:to-primary-600"></div>
+          <div className="relative h-[2000px]">
+            {/* Fixed Background Timeline with Year Markers */}
+            <div className="absolute left-1/2 top-0 bottom-0 transform -translate-x-1/2">
+              {/* Vertical Line - with gap */}
+              <div className="absolute left-1/2 top-0 w-0.5 bg-neutral-300 dark:bg-neutral-700 transform -translate-x-1/2" style={{ height: '70%' }}></div>
+              <div className="absolute left-1/2 w-0.5 bg-neutral-300 dark:bg-neutral-700 transform -translate-x-1/2" style={{ top: '75%', height: '25%' }}></div>
+              
+              {/* Gap indicator */}
+              <div className="absolute left-1/2 transform -translate-x-1/2" style={{ top: '72.5%' }}>
+                <div className="flex flex-col items-center">
+                  <div className="text-neutral-400 dark:text-neutral-600 text-xs font-semibold">⋮</div>
+                </div>
+              </div>
+              
+              {/* Fixed Year Markers (2025 - 2019, then 2015) */}
+              {[2025, 2024, 2023, 2022, 2021, 2020, 2019].map((year, index) => (
+                <div 
+                  key={year}
+                  className="absolute left-1/2 transform -translate-x-1/2"
+                  style={{ top: `${(index / 7) * 70}%` }}
+                >
+                  {/* Small fixed dot */}
+                  <div className="w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-600"></div>
+                  
+                  {/* Year label */}
+                  <span className="absolute left-full ml-6 md:left-auto md:right-full md:mr-6 top-1/2 transform -translate-y-1/2 text-sm font-bold text-neutral-500 dark:text-neutral-500 whitespace-nowrap">
+                    {year}
+                  </span>
+                </div>
+              ))}
+              
+              {/* 2015 marker at the bottom */}
+              <div 
+                className="absolute left-1/2 transform -translate-x-1/2"
+                style={{ top: '75%' }}
+              >
+                {/* Small fixed dot */}
+                <div className="w-2 h-2 rounded-full bg-neutral-400 dark:bg-neutral-600"></div>
+                
+                {/* Year label */}
+                <span className="absolute left-full ml-6 md:left-auto md:right-full md:mr-6 top-1/2 transform -translate-y-1/2 text-sm font-bold text-neutral-500 dark:text-neutral-500 whitespace-nowrap">
+                  2015
+                </span>
+              </div>
+            </div>
 
-            {/* Timeline Items */}
-            <div className="space-y-12">
+            {/* Dynamic Work Experience Hotspots */}
+            <div className="relative h-full">
               {experiences.map((exp, index) => {
-                const year = exp.period.split(' ').pop() || exp.period.split('-')[0].trim()
+                // Parse start date from period string
+                const parseStartDate = (period: string): number => {
+                  const monthMap: { [key: string]: number } = {
+                    'January': 0, 'February': 1, 'March': 2, 'April': 3, 'May': 4, 'June': 5,
+                    'July': 6, 'August': 7, 'September': 8, 'October': 9, 'November': 10, 'December': 11,
+                    'Jan': 0, 'Feb': 1, 'Mar': 2, 'Apr': 3, 'Jun': 5, 'Jul': 6, 'Aug': 7, 'Sep': 8, 'Oct': 9, 'Nov': 10, 'Dec': 11
+                  }
+                  
+                  // Extract the start part (before " - ")
+                  const startPart = period.split(' - ')[0].trim()
+                  
+                  // Try to match "Month Year" or "Month YYYY" pattern
+                  const match = startPart.match(/([A-Za-z]+)\s+(\d{4})/)
+                  if (match) {
+                    const month = match[1]
+                    const year = parseInt(match[2])
+                    const monthNum = monthMap[month] !== undefined ? monthMap[month] : 0
+                    // Return fractional year (e.g., March 2025 = 2025.167)
+                    return year + (monthNum / 12)
+                  }
+                  
+                  // Fallback: just extract year
+                  const yearMatch = startPart.match(/(\d{4})/)
+                  return yearMatch ? parseInt(yearMatch[1]) : 2020
+                }
+                
+                const startDate = parseStartDate(exp.period)
+                
+                // Calculate position based on date with gap
+                // 2025-2019 occupies 0-70% of timeline
+                // 2015 occupies 75% of timeline
+                let yearPosition: number
+                if (startDate >= 2019) {
+                  // Map 2025-2019 to 0-70%
+                  yearPosition = ((2025 - startDate) / 6) * 70
+                } else {
+                  // Map 2015 experiences to 75% (close to the 2015 marker)
+                  yearPosition = 75
+                }
+                
+                // Define different colors for each work experience
+                const colors = [
+                  { bg: 'bg-cyan-500', dark: 'dark:bg-cyan-400', shadow: 'shadow-cyan-500/50' },
+                  { bg: 'bg-purple-500', dark: 'dark:bg-purple-400', shadow: 'shadow-purple-500/50' },
+                  { bg: 'bg-pink-500', dark: 'dark:bg-pink-400', shadow: 'shadow-pink-500/50' },
+                  { bg: 'bg-orange-500', dark: 'dark:bg-orange-400', shadow: 'shadow-orange-500/50' },
+                  { bg: 'bg-green-500', dark: 'dark:bg-green-400', shadow: 'shadow-green-500/50' },
+                  { bg: 'bg-blue-500', dark: 'dark:bg-blue-400', shadow: 'shadow-blue-500/50' }
+                ]
+                const color = colors[index % colors.length]
                 
                 return (
                   <motion.div
                     key={exp.id}
-                    className="relative"
+                    className="absolute w-full"
+                    style={{ top: `${yearPosition}%` }}
                     initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
-                    onMouseEnter={() => setHoveredExperience(exp.id)}
-                    onMouseLeave={() => setHoveredExperience(null)}
                   >
-                    {/* Timeline Dot - Centered Vertically */}
+                    {/* Dynamic Work Experience Dot - Larger and colored */}
                     <motion.div 
-                      className={`absolute left-8 md:left-1/2 top-8 w-4 h-4 rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10 transition-all duration-300 ${
+                      className={`absolute left-1/2 w-5 h-5 rounded-full transform -translate-x-1/2 -translate-y-1/2 z-10 transition-all duration-300 ${color.bg} ${color.dark} ${
                         hoveredExperience === exp.id 
-                          ? 'bg-accent-500 dark:bg-accent-400 scale-150 shadow-lg shadow-accent-500/50' 
-                          : 'bg-primary-500 dark:bg-primary-400'
+                          ? `scale-150 shadow-lg ${color.shadow}` 
+                          : ''
                       }`}
-                      whileHover={{ scale: 1.5 }}
+                      animate={{
+                        scale: hoveredExperience === exp.id ? 1.5 : 1,
+                      }}
                     />
-
-                    {/* Year Label */}
-                    <div className="absolute left-8 md:left-1/2 top-8 transform -translate-x-1/2 -translate-y-1/2">
-                      <span className="absolute left-full ml-3 md:left-auto md:right-full md:mr-3 text-sm font-bold text-primary-600 dark:text-primary-400 whitespace-nowrap">
-                        {year}
-                      </span>
-                    </div>
 
                     {/* Content Card */}
                     <div className={`ml-20 md:ml-0 ${index % 2 === 0 ? 'md:pr-[calc(50%+3rem)]' : 'md:pl-[calc(50%+3rem)]'}`}>
-                    <motion.div
-                      className={`bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
-                        hoveredExperience === exp.id 
-                          ? 'shadow-2xl scale-105 border-2 border-accent-400 dark:border-accent-500' 
-                          : 'hover:shadow-xl'
-                      }`}
-                      whileHover={{ y: -5 }}
-                    >
-                      {/* Header - Always Visible */}
-                      <div className="mb-3">
-                        <h3 className="text-xl md:text-2xl font-bold text-neutral-900 dark:text-white mb-1">
-                          {exp.title}
-                        </h3>
-                        <p className="text-lg text-primary-600 dark:text-primary-400 font-semibold mb-2">
-                          {exp.company}
-                        </p>
-                        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm text-neutral-600 dark:text-neutral-400">
-                          <p className="font-medium">{exp.period}</p>
-                          <p>{exp.location}</p>
-                        </div>
-                      </div>
-
-                      {/* Description - Shows on Hover */}
                       <motion.div
-                        initial={{ height: 0, opacity: 0 }}
-                        animate={{
-                          height: hoveredExperience === exp.id ? 'auto' : 0,
-                          opacity: hoveredExperience === exp.id ? 1 : 0
-                        }}
-                        transition={{ duration: 0.3, ease: 'easeInOut' }}
-                        className="overflow-hidden"
+                        className={`bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-lg cursor-pointer transition-all duration-300 ${
+                          hoveredExperience === exp.id 
+                            ? 'shadow-2xl scale-105 border-2 border-accent-400 dark:border-accent-500' 
+                            : 'hover:shadow-xl'
+                        }`}
+                        whileHover={{ y: -5 }}
+                        onMouseEnter={() => setHoveredExperience(exp.id)}
+                        onMouseLeave={() => setHoveredExperience(null)}
                       >
-                        <div className="pt-3 border-t border-neutral-200 dark:border-neutral-700">
-                          <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                            {exp.description}
+                        {/* Header - Always Visible */}
+                        <div className="mb-3">
+                          <h3 className="text-xl md:text-2xl font-bold text-neutral-900 dark:text-white mb-1">
+                            {exp.title}
+                          </h3>
+                          <p className="text-lg text-primary-600 dark:text-primary-400 font-semibold mb-2">
+                            {exp.company}
                           </p>
+                          <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center text-sm text-neutral-600 dark:text-neutral-400">
+                            <p className="font-medium">{exp.period}</p>
+                            <p>{exp.location}</p>
+                          </div>
                         </div>
-                      </motion.div>
 
-                      {/* Hover Indicator */}
-                      {hoveredExperience !== exp.id && (
-                        <motion.p 
-                          className="text-sm text-neutral-500 dark:text-neutral-400 italic mt-2"
-                          initial={{ opacity: 0 }}
-                          animate={{ opacity: 1 }}
-                          transition={{ delay: 0.2 }}
+                        {/* Description - Shows on Hover */}
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{
+                            height: hoveredExperience === exp.id ? 'auto' : 0,
+                            opacity: hoveredExperience === exp.id ? 1 : 0
+                          }}
+                          transition={{ duration: 0.3, ease: 'easeInOut' }}
+                          className="overflow-hidden"
                         >
-                          Hover to see details
-                        </motion.p>
-                      )}
-                    </motion.div>
-                  </div>
-                </motion.div>
+                          <div className="pt-3 border-t border-neutral-200 dark:border-neutral-700">
+                            <p className="text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                              {exp.description}
+                            </p>
+                          </div>
+                        </motion.div>
+
+                        {/* Hover Indicator */}
+                        {hoveredExperience !== exp.id && (
+                          <motion.p 
+                            className="text-sm text-neutral-500 dark:text-neutral-400 italic mt-2"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ delay: 0.2 }}
+                          >
+                            Hover to see details
+                          </motion.p>
+                        )}
+                      </motion.div>
+                    </div>
+                  </motion.div>
                 )
               })}
             </div>
