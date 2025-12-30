@@ -1,68 +1,102 @@
 import { motion, Variants } from 'framer-motion'
-import { useState } from 'react'
 
 interface Experience {
   id: number
   title: string
   company: string
   period: string
+  yearRange: string
   location: string
-  description: string
+  bullets: string[]
 }
 
 function About() {
-  const [hoveredExperience, setHoveredExperience] = useState<number | null>(null)
-
   const experiences: Experience[] = [
     {
       id: 1,
       title: "Operations Manager",
       company: "Sysworld",
       period: "Mar 2025 - Present",
-      location: "Buenos Aires, Argentina (Remote)",
-      description: "Pacer is a Sysworld product, which is a fintech SaaS platform streamlining payments for businesses across Latin America. In my role, I design and put in place the main setup and processes for our payments platform, making it easier to grow and add new features that fit what customers want, while handling full client relationships from start to finish, listening to their needs, and delivering custom changes to the platform to keep them happy. I also oversee daily tools and frameworks."
+      yearRange: "2025 – Present",
+      location: "Remote",
+      bullets: [
+        "Design and implement core setup and processes for Pacer, a fintech SaaS platform streamlining payments across Latin America",
+        "Manage full client relationships from onboarding to delivery, ensuring custom platform changes meet customer needs",
+        "Oversee daily tools and frameworks to support platform scalability and feature development",
+        "Drive customer satisfaction through active listening and rapid response to client requirements"
+      ]
     },
     {
       id: 2,
       title: "Sr Product Manager",
       company: "TRIPP Inc.",
       period: "September 2023 - February 2025",
-      location: "California, USA (Remote)",
-      description: "TRIPP is a wellness and meditation app available across VR devices and mobile platforms. I worked closely with Art, Technical Art, and the growth team to create new experiences for the game, from immersive scenes and experiences to new content and challenges that drove retention and kept our users engaged. Beyond project coordination and day-to-day operations, I worked directly on shaping upcoming product features and initiatives, aligning them with user needs and business objectives. My role mainly involved managing timelines, resolving bottlenecks, and making sure we hit our goals on time."
+      yearRange: "2023 – 2025",
+      location: "Remote",
+      bullets: [
+        "Collaborated with Art, Technical Art, and growth teams to create immersive VR/mobile wellness experiences",
+        "Shaped product features and initiatives aligned with user needs and business objectives",
+        "Managed timelines and resolved bottlenecks to ensure on-time delivery of new content and challenges",
+        "Drove user retention through engaging experiences and gamification elements"
+      ]
     },
     {
       id: 3,
       title: "Delivery Manager",
       company: "Interatica",
       period: "August 2021 - July 2023",
-      location: "California, USA (Remote)",
-      description: "Interatica is a software development agency creating custom digital solutions for clients in marketing and entertainment. As a Project and Delivery Manager, I oversaw the development of a range of software products, including web-based applications, native mobile apps, games, VR/AR experiences, interactive panels, and other digital media used mainly in marketing activations and conventions, being in charge of their delivery and setup on time and making sure everything went according to the plan. I led a highly skilled team of designers, developers, and testers to ensure that we delivered exceptional, high-quality products and exclusive experiences to our renowned clients."
+      yearRange: "2021 – 2023",
+      location: "Remote",
+      bullets: [
+        "Oversaw development of web apps, mobile apps, games, VR/AR experiences, and interactive panels for marketing activations",
+        "Led cross-functional teams of designers, developers, and testers to deliver high-quality digital solutions",
+        "Managed on-time delivery and setup for conventions and events for renowned clients",
+        "Ensured exceptional product quality and exclusive experiences for marketing and entertainment sectors"
+      ]
     },
     {
       id: 4,
       title: "Communication-Operations Manager",
       company: "Indelve Studios",
       period: "October 2021 - May 2023",
-      location: "USA (Remote)",
-      description: "I joined Indelve, an indie game studio, as a side venture to follow my passion for gaming, where I managed communications and networking. This role taught me a lot about the entrepreneurial side. From pitching to possible investors and public speaking to building a remote team of devs and artists from scratch, all while steering the project through creative milestones to bring the game's vision to life."
+      yearRange: "2021 – 2023",
+      location: "Remote",
+      bullets: [
+        "Managed communications and networking for indie game studio as a passion project",
+        "Pitched to investors and delivered public presentations to secure funding and partnerships",
+        "Built and led remote team of developers and artists from scratch",
+        "Steered project through creative milestones to bring game vision to life"
+      ]
     },
     {
       id: 5,
       title: "Project Manager",
       company: "Summa Solutions (Infracommerce)",
       period: "June 2020 - August 2021",
-      location: "Buenos Aires, Argentina (Remote)",
-      description: "Summa Solutions is an e-commerce agency building custom digital platforms for clients. In my role, I handled overall coordination, implementation, and control of e-commerce projects mainly in Adobe Commerce and VTEX mixing methodologies from waterfall and time-and-materials setups for structured builds to more agile approaches for quick pivots on client tweaks. I coordinated teams, forecasted resources, and created P&L reports for the company partners, plus managed the daily interface and communication with the client project team to keep everything moving on track. I also supported feedback loops and live incident resolutions, adapting plans and reacting to make sure our customers were happy."
+      yearRange: "2020 – 2021",
+      location: "Remote",
+      bullets: [
+        "Coordinated e-commerce projects on Adobe Commerce and VTEX using waterfall and agile methodologies",
+        "Forecasted resources and created P&L reports for company partners",
+        "Managed daily client communication and interface to keep projects on track",
+        "Supported live incident resolutions and feedback loops to ensure customer satisfaction"
+      ]
     },
     {
       id: 6,
       title: "General Producer",
       company: "Grupo Sarapura",
       period: "July 2015 - June 2020",
-      location: "Buenos Aires, Argentina (Remote)",
-      description: "Grupo Sarapura produces corporate and social events across Argentina and South America. In my role, I handled overall direction, coordination, control, and execution of events for clients, managing a mixed team of lighting, sound, and video technicians alongside aspects like catering, setting, etc. I also directed client relationships, building solid partnerships with strategic industry and media companies to keep collaborations strong and on track."
+      yearRange: "2015 – 2020",
+      location: "Buenos Aires, Argentina",
+      bullets: [
+        "Directed overall coordination, control, and execution of corporate and social events across Argentina and South America",
+        "Managed mixed teams of lighting, sound, and video technicians plus catering and setting logistics",
+        "Built solid partnerships with strategic industry and media companies",
+        "Maintained strong client relationships and ensured successful event delivery"
+      ]
     }
-  ].reverse()
+  ]
 
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
@@ -142,7 +176,7 @@ function About() {
           </motion.p>
         </motion.div>
 
-        {/* Work Experience Timeline Section */}
+        {/* Work Experience Section */}
         <motion.div 
           className="mt-20"
           initial={{ opacity: 0, y: 20 }}
@@ -154,113 +188,56 @@ function About() {
             Work Experience
           </h2>
 
-          {/* Mobile-First Timeline Container */}
-          <div className="relative">
-            {/* Vertical Timeline Line - Hidden on mobile, visible on md+ */}
-            <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-300 via-accent-300 to-primary-300 dark:from-primary-700 dark:via-accent-700 dark:to-primary-700 transform -translate-x-1/2"></div>
+          {/* Cards Grid - 1 column mobile, 2 columns desktop */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={exp.id}
+                className="bg-white dark:bg-neutral-800 rounded-2xl p-6 shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.5, delay: index * 0.1 }}
+              >
+                {/* Year Range Badge */}
+                <div className="mb-4">
+                  <span className="inline-block px-4 py-1.5 bg-primary-600 dark:bg-primary-500 text-white text-sm font-bold rounded-full">
+                    {exp.yearRange}
+                  </span>
+                </div>
 
-            {/* Work Experience Cards */}
-            <div className="space-y-8 md:space-y-12">
-              {experiences.map((exp, index) => {
-                // Define different colors for each work experience
-                const colors = [
-                  { bg: 'bg-cyan-500', dark: 'dark:bg-cyan-400', shadow: 'shadow-cyan-500/50', border: 'border-cyan-500 dark:border-cyan-400' },
-                  { bg: 'bg-purple-500', dark: 'dark:bg-purple-400', shadow: 'shadow-purple-500/50', border: 'border-purple-500 dark:border-purple-400' },
-                  { bg: 'bg-pink-500', dark: 'dark:bg-pink-400', shadow: 'shadow-pink-500/50', border: 'border-pink-500 dark:border-pink-400' },
-                  { bg: 'bg-orange-500', dark: 'dark:bg-orange-400', shadow: 'shadow-orange-500/50', border: 'border-orange-500 dark:border-orange-400' },
-                  { bg: 'bg-green-500', dark: 'dark:bg-green-400', shadow: 'shadow-green-500/50', border: 'border-green-500 dark:border-green-400' },
-                  { bg: 'bg-blue-500', dark: 'dark:bg-blue-400', shadow: 'shadow-blue-500/50', border: 'border-blue-500 dark:border-blue-400' }
-                ]
-                const color = colors[index % colors.length]
-                
-                return (
-                  <motion.div
-                    key={exp.id}
-                    className="relative"
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true, amount: 0.3 }}
-                    transition={{ duration: 0.6, delay: index * 0.1 }}
-                  >
-                    {/* Desktop: Alternating Layout */}
-                    <div className={`md:grid md:grid-cols-2 md:gap-8 ${index % 2 === 0 ? '' : 'md:grid-flow-dense'}`}>
-                      {/* Timeline Dot - Centered on desktop, left on mobile */}
-                      <div className={`hidden md:block absolute left-1/2 top-8 w-6 h-6 rounded-full transform -translate-x-1/2 z-10 transition-all duration-300 ${color.bg} ${color.dark} ring-4 ring-white dark:ring-neutral-900 ${
-                        hoveredExperience === exp.id 
-                          ? `scale-125 shadow-lg ${color.shadow}` 
-                          : ''
-                      }`}></div>
+                {/* Company Name (Bold) */}
+                <h3 className="text-xl md:text-2xl font-bold text-neutral-900 dark:text-white mb-2">
+                  {exp.company}
+                </h3>
 
-                      {/* Mobile Timeline Dot - Left aligned */}
-                      <div className={`md:hidden absolute left-0 top-8 w-5 h-5 rounded-full z-10 transition-all duration-300 ${color.bg} ${color.dark} ring-3 ring-white dark:ring-neutral-900`}></div>
+                {/* Role */}
+                <p className="text-lg text-primary-600 dark:text-primary-400 font-semibold mb-3">
+                  {exp.title}
+                </p>
 
-                      {/* Content Card */}
-                      <div className={`pl-8 md:pl-0 ${index % 2 === 0 ? 'md:col-start-1' : 'md:col-start-2'}`}>
-                        <motion.div
-                          className={`bg-white dark:bg-neutral-800 rounded-2xl p-5 md:p-6 shadow-lg transition-all duration-300 border-l-4 md:border-l-0 ${color.border} ${
-                            hoveredExperience === exp.id 
-                              ? 'shadow-2xl md:scale-105 md:border-2' 
-                              : 'hover:shadow-xl'
-                          }`}
-                          whileHover={{ y: -5 }}
-                          onMouseEnter={() => setHoveredExperience(exp.id)}
-                          onMouseLeave={() => setHoveredExperience(null)}
-                          onTouchStart={() => setHoveredExperience(exp.id)}
-                        >
-                          {/* Header - Always Visible */}
-                          <div className="mb-3">
-                            <h3 className="text-lg md:text-xl lg:text-2xl font-bold text-neutral-900 dark:text-white mb-1">
-                              {exp.title}
-                            </h3>
-                            <p className="text-base md:text-lg text-primary-600 dark:text-primary-400 font-semibold mb-2">
-                              {exp.company}
-                            </p>
-                            <div className="flex flex-col text-xs md:text-sm text-neutral-600 dark:text-neutral-400 space-y-1">
-                              <p className="font-medium">{exp.period}</p>
-                              <p>{exp.location}</p>
-                            </div>
-                          </div>
+                {/* Location Tag */}
+                <div className="mb-4">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 bg-neutral-100 dark:bg-neutral-700 text-neutral-700 dark:text-neutral-300 text-sm rounded-lg">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                    {exp.location}
+                  </span>
+                </div>
 
-                          {/* Description - Always visible on mobile, hover on desktop */}
-                          <motion.div
-                            initial={{ height: 'auto', opacity: 1 }}
-                            animate={{
-                              height: hoveredExperience === exp.id ? 'auto' : 'auto',
-                              opacity: hoveredExperience === exp.id ? 1 : 1
-                            }}
-                            className="md:overflow-hidden"
-                            style={{
-                              height: hoveredExperience === exp.id ? 'auto' : (typeof window !== 'undefined' && window.innerWidth >= 768 ? 0 : 'auto')
-                            }}
-                          >
-                            <div className="pt-3 border-t border-neutral-200 dark:border-neutral-700">
-                              <p className="text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
-                                {exp.description}
-                              </p>
-                            </div>
-                          </motion.div>
-
-                          {/* Hover Indicator - Desktop only */}
-                          {hoveredExperience !== exp.id && (
-                            <motion.p 
-                              className="hidden md:block text-sm text-neutral-500 dark:text-neutral-400 italic mt-2"
-                              initial={{ opacity: 0 }}
-                              animate={{ opacity: 1 }}
-                              transition={{ delay: 0.2 }}
-                            >
-                              Hover to see details
-                            </motion.p>
-                          )}
-                        </motion.div>
-                      </div>
-
-                      {/* Empty column for alternating layout on desktop */}
-                      <div className={`hidden md:block ${index % 2 === 0 ? 'md:col-start-2' : 'md:col-start-1'}`}></div>
-                    </div>
-                  </motion.div>
-                )
-              })}
-            </div>
+                {/* Bullet Points */}
+                <ul className="space-y-2.5">
+                  {exp.bullets.map((bullet, bulletIndex) => (
+                    <li key={bulletIndex} className="flex items-start gap-2.5 text-sm md:text-base text-neutral-700 dark:text-neutral-300 leading-relaxed">
+                      <span className="text-primary-600 dark:text-primary-400 mt-1.5 flex-shrink-0">•</span>
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </motion.div>
+            ))}
           </div>
         </motion.div>
       </div>
