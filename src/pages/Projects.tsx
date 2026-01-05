@@ -241,12 +241,12 @@ function Projects() {
                         </motion.div>
                       </div>
                       <img 
-                        src={`https://img.youtube.com/vi/${project.video.includes('youtube.com') ? project.video.split('/').pop() : 'default'}/maxresdefault.jpg`}
+                        src={`https://img.youtube.com/vi/${project.video?.includes('youtube.com') ? project.video.split('/').pop() : 'default'}/maxresdefault.jpg`}
                         alt={project.name}
                         className="w-full h-full object-cover"
                         onError={(e) => {
                           const target = e.target as HTMLImageElement;
-                          target.src = `https://img.youtube.com/vi/${project.video.includes('youtube.com') ? project.video.split('/').pop() : 'default'}/hqdefault.jpg`;
+                          target.src = `https://img.youtube.com/vi/${project.video?.includes('youtube.com') ? project.video.split('/').pop() : 'default'}/hqdefault.jpg`;
                         }}
                       />
                     </div>
