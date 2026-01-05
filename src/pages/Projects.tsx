@@ -164,6 +164,7 @@ function Projects() {
       description: "We created 3 experiences for the promo tour across 10+ Spanish malls.\n\n• Maze Runner Game: Leap Motion sensor game letting attendees control a dinosaur via hand gestures to navigate obstacles.\n\n• Giveaway Roulette: A simple spinner to give out prizes to attendees.\n\n• VR Helicopter Experience: Immersive VR flight over Malta (filming site) with navigation/landing, motion chairs, and vibration feedback; full 3D development for multi-sensory experience.",
       video: "https://player.vimeo.com/video/993943130",
       videoType: "embed",
+      image: "/jurassic-thumb.png",
       tags: ["VR", "Games", "Custom Software", "2022"]
     },
     {
@@ -227,28 +228,55 @@ function Projects() {
                 <div className="relative h-64 overflow-hidden bg-gradient-to-br from-primary-100 to-accent-100 dark:from-neutral-700 dark:to-neutral-600">
                   {project.video && project.videoType === 'embed' && (
                     <div className="relative w-full h-full">
-                      <div className="absolute inset-0 flex items-center justify-center bg-black/10 dark:bg-black/30">
-                        <motion.div 
-                          className="w-20 h-20 rounded-full bg-white/90 dark:bg-white/80 flex items-center justify-center shadow-2xl"
-                          animate={{
-                            scale: hoveredProject === project.id ? 1.1 : 1
-                          }}
-                          transition={{ duration: 0.3 }}
-                        >
-                          <svg className="w-10 h-10 text-primary-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                          </svg>
-                        </motion.div>
-                      </div>
-                      <img 
-                        src={`https://img.youtube.com/vi/${project.video?.includes('youtube.com') ? project.video.split('/').pop() : 'default'}/maxresdefault.jpg`}
-                        alt={project.name}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          const target = e.target as HTMLImageElement;
-                          target.src = `https://img.youtube.com/vi/${project.video?.includes('youtube.com') ? project.video.split('/').pop() : 'default'}/hqdefault.jpg`;
-                        }}
-                      />
+                      {/* Show thumbnail when not hovering */}
+                      <AnimatePresence>
+                        {hoveredProject !== project.id && (
+                          <motion.div
+                            className="absolute inset-0 z-10"
+                            initial={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <img 
+                              src={project.image || `https://img.youtube.com/vi/${project.video.includes('youtube.com') ? project.video.split('/').pop() : 'default'}/maxresdefault.jpg`}
+                              alt={project.name}
+                              className="w-full h-full object-cover"
+                              onError={(e) => {
+                                const target = e.target as HTMLImageElement;
+                                if (project.video?.includes('youtube.com')) {
+                                  target.src = `https://img.youtube.com/vi/${project.video.split('/').pop()}/hqdefault.jpg`;
+                                }
+                              }}
+                            />
+                            <div className="absolute inset-0 flex items-center justify-center bg-black/10 dark:bg-black/30">
+                              <div className="w-20 h-20 rounded-full bg-white/90 dark:bg-white/80 flex items-center justify-center shadow-2xl">
+                                <svg className="w-10 h-10 text-primary-600 ml-1" fill="currentColor" viewBox="0 0 24 24">
+                                  <path d="M8 5v14l11-7z"/>
+                                </svg>
+                              </div>
+                            </div>
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                      {/* Show video preview on hover */}
+                      <AnimatePresence>
+                        {hoveredProject === project.id && (
+                          <motion.div
+                            className="absolute inset-0 z-20"
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            exit={{ opacity: 0 }}
+                            transition={{ duration: 0.3 }}
+                          >
+                            <iframe
+                              src={`${project.video}?autoplay=1&muted=1&loop=1`}
+                              className="w-full h-full"
+                              frameBorder="0"
+                              allow="autoplay; encrypted-media"
+                            />
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
                     </div>
                   )}
                   {project.video && project.videoType !== 'embed' && (
