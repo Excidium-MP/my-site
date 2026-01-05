@@ -65,6 +65,9 @@ function Projects() {
     // Blockchain - Teal
     if (tagLower.includes('blockchain')) return 'from-teal-500 to-teal-600'
     
+    // Fintech - Sky
+    if (tagLower.includes('fintech')) return 'from-sky-500 to-sky-600'
+    
     // Years (dates) - Amber
     if (/\d{4}/.test(tag)) return 'from-amber-500 to-amber-600'
     
@@ -74,38 +77,6 @@ function Projects() {
 
   const projects: Project[] = [
     {
-      id: 1,
-      name: "Whatsapp AI Chatbot and Payments Bot",
-      description: "We developed a Whatsapp bot with AI integrated to work as a support assistant by using an AI Wrapper which we could choose different models and jump in as humans if needed or the AI detects any \"bad or angry answer\" also notifies the Support area.\n\nWe also developed many microservices to be able to use WhatsApp for users to make payments through Debit from their bank accounts while doing a series of validations to ensure data security and a smooth experience.",
-      tags: ["AI", "Custom Software", "2025"],
-      image: "/whatsapp-bot-thumb.png"
-    },
-    {
-      id: 2,
-      name: "Jazmín Chebar",
-      description: "Working closely with an experienced Delivery Manager who handled client relations, I led the internal development team for Jazmín Chebar's fashion e-commerce platform. Focused on building innovative features that were cutting-edge at the time, such as personalized styling tools, advanced filtering, 3D Images, and split payment methods.",
-      note: "Live site: www.jazminchebar.com.ar",
-      video: "https://www.youtube.com/embed/mgQXYqlf4tc",
-      videoType: "embed",
-      tags: ["E-commerce", "2020 to 2021"]
-    },
-    {
-      id: 3,
-      name: "Sommier Center",
-      description: "As the main PM for SommierCenter (a leading Argentine mattress and furniture retailer), I led the full migration from Magento 1 to Magento 2 (now Adobe Commerce). This upgrade improved performance, security, and scalability for high-traffic seasons. Post-migration, I managed ongoing feature development and marketing campaigns on a time-and-materials basis delivering promotions, UX improvements, and checkout optimizations that supported consistent growth.",
-      note: "Live site: www.sommiercenter.com.ar",
-      image: "/sommier-center.png",
-      tags: ["E-commerce", "2020 to 2021"]
-    },
-    {
-      id: 4,
-      name: "Pinturerias Rex",
-      description: "Supported Rex's strategic pivot from a traditional paint retailer to a broad multi-industry e-commerce platform, expanding from home improvement products to tech gadgets, appliances, and more. Managed roadmap, feature prioritization, and cross-functional delivery to create a unified, scalable online store that reflected the brand's new 'everything you need' positioning.",
-      note: "Live site: somosrex.com",
-      image: "/rex.png",
-      tags: ["E-commerce", "2020 to 2021"]
-    },
-    {
       id: 5,
       name: "AR Interactive Panel - Real life Object interactions",
       description: "Delivered and Led the team developing a Unity-based interactive panel featuring augmented reality capabilities that mapped physical movements with target image recognition. This enabled real-time object manipulation, allowing users to rotate physical objects and see corresponding digital representations displayed on screen, creating an immersive experience for trade show attendees.",
@@ -114,16 +85,53 @@ function Projects() {
       tags: ["Unity", "Custom Software", "Product", "2022"]
     },
     {
-      id: 6,
-      name: "Customer Loyalty Mobile App",
-      description: "Led the end-to-end design, development, and delivery of a native mobile loyalty application for a major healthcare provider in Mexico, published on both the App Store and Google Play Store. The app featured comprehensive customer engagement tools, rewards programs, and gamification elements designed to enhance user experience and incentivize continued platform usage.",
-      tags: ["Mobile", "Product", "2023"]
+      id: 14,
+      name: "Pacer - comprehensive automation of financial transactions",
+      description: "I work with a team designing and implementing core setup and processes for a platform streamlining payments across Latin America as well as driving customer satisfaction through active listening and rapid response to client requirements.",
+      tags: ["Fintech", "Product", "Custom Software", "2025-2026"],
+      image: "/pacer-thumb.png"
     },
     {
-      id: 7,
-      name: "Customizable Event Hub & Management Platform",
-      description: "Developed a comprehensive web and mobile application platform with modular architecture for trade shows and corporate events. The solution featured attendee registration with unique QR code access, networking capabilities, meeting scheduling, personalized agenda management for panels and workshops, and robust gamification modules including trivia competitions, scavenger hunts, and various prize giveaway mechanics. While not a full SaaS product, the platform's modular design enabled rapid customization for different clients and event types.",
-      tags: ["Custom Software", "Product", "2022 to 2023"]
+      id: 2,
+      name: "Jazmín Chebar",
+      description: "Working closely with an experienced Delivery Manager who handled client relations, I led the internal development team for Jazmín Chebar's fashion e-commerce platform. Focused on building innovative features that were cutting-edge at the time, such as personalized styling tools, advanced filtering, 3D Images, and split payment methods.",
+      note: "Live site: www.jazminchebar.com.ar",
+      video: "https://www.youtube.com/embed/_c-cX0drytQ",
+      videoType: "embed",
+      tags: ["E-commerce", "2020 to 2021"]
+    },
+    {
+      id: 11,
+      name: "TRIPP - Wellness and Meditation App",
+      description: "Worked on TRIPP, an innovative VR wellness and meditation application available across VR devices and mobile platforms. Contributed to the release of new immersive content and experiences. Most notably, played a key role in the launch of TRIPP on the Apple Vision Pro device, being part of the team that brought the app to Apple's groundbreaking spatial computing platform. This experience provided invaluable insight into launching products on cutting-edge hardware and being part of a major Apple product ecosystem launch.",
+      tags: ["VR", "Mobile", "Art", "Growth", "Product", "Marketing", "2023 to 2025"],
+      logo: "/tripp-logo.png",
+      image: "/tripp-thumb.png",
+      link: "https://www.tripp.com/"
+    },
+    {
+      id: 1,
+      name: "Whatsapp AI Chatbot and Payments Bot",
+      description: "We developed a Whatsapp bot with AI integrated to work as a support assistant by using an AI Wrapper which we could choose different models and jump in as humans if needed or the AI detects any \"bad or angry answer\" also notifies the Support area.\n\nWe also developed many microservices to be able to use WhatsApp for users to make payments through Debit from their bank accounts while doing a series of validations to ensure data security and a smooth experience.",
+      tags: ["AI", "Custom Software", "2025"],
+      image: "/whatsapp-bot-thumb.png"
+    },
+    {
+      id: 12,
+      name: "Jurassic World III – Spain Mall Tour",
+      description: "We created 3 experiences for the promo tour across 10+ Spanish malls.\n\n• Maze Runner Game: Leap Motion sensor game letting attendees control a dinosaur via hand gestures to navigate obstacles.\n\n• Giveaway Roulette: A simple spinner to give out prizes to attendees.\n\n• VR Helicopter Experience: Immersive VR flight over Malta (filming site) with navigation/landing, motion chairs, and vibration feedback; full 3D development for multi-sensory experience.",
+      video: "https://player.vimeo.com/video/993943130",
+      videoType: "embed",
+      image: "/jurassic-thumb.png",
+      tags: ["VR", "Games", "Custom Software", "2022"]
+    },
+    {
+      id: 4,
+      name: "Pinturerias Rex",
+      description: "Supported Rex's strategic pivot from a traditional paint retailer to a broad multi-industry e-commerce platform, expanding from home improvement products to tech gadgets, appliances, and more. Managed roadmap, feature prioritization, and cross-functional delivery to create a unified, scalable online store that reflected the brand's new 'everything you need' positioning.",
+      note: "Live site: somosrex.com",
+      image: "/rex.png",
+      tags: ["E-commerce", "2020 to 2021"]
     },
     {
       id: 8,
@@ -150,22 +158,24 @@ function Projects() {
       tags: ["Web", "Unity", "VR", "AR", "Marketing", "2021 to 2023"]
     },
     {
-      id: 11,
-      name: "TRIPP - Wellness and Meditation App",
-      description: "Worked on TRIPP, an innovative VR wellness and meditation application available across VR devices and mobile platforms. Contributed to the release of new immersive content and experiences. Most notably, played a key role in the launch of TRIPP on the Apple Vision Pro device, being part of the team that brought the app to Apple's groundbreaking spatial computing platform. This experience provided invaluable insight into launching products on cutting-edge hardware and being part of a major Apple product ecosystem launch.",
-      tags: ["VR", "Mobile", "Art", "Growth", "Product", "Marketing", "2023 to 2025"],
-      logo: "/tripp-logo.png",
-      image: "/tripp-thumb.png",
-      link: "https://www.tripp.com/"
+      id: 3,
+      name: "Sommier Center",
+      description: "As the main PM for SommierCenter (a leading Argentine mattress and furniture retailer), I led the full migration from Magento 1 to Magento 2 (now Adobe Commerce). This upgrade improved performance, security, and scalability for high-traffic seasons. Post-migration, I managed ongoing feature development and marketing campaigns on a time-and-materials basis delivering promotions, UX improvements, and checkout optimizations that supported consistent growth.",
+      note: "Live site: www.sommiercenter.com.ar",
+      image: "/sommier-center.png",
+      tags: ["E-commerce", "2020 to 2021"]
     },
     {
-      id: 12,
-      name: "Jurassic World III – Spain Mall Tour",
-      description: "We created 3 experiences for the promo tour across 10+ Spanish malls.\n\n• Maze Runner Game: Leap Motion sensor game letting attendees control a dinosaur via hand gestures to navigate obstacles.\n\n• Giveaway Roulette: A simple spinner to give out prizes to attendees.\n\n• VR Helicopter Experience: Immersive VR flight over Malta (filming site) with navigation/landing, motion chairs, and vibration feedback; full 3D development for multi-sensory experience.",
-      video: "https://player.vimeo.com/video/993943130",
-      videoType: "embed",
-      image: "/jurassic-thumb.png",
-      tags: ["VR", "Games", "Custom Software", "2022"]
+      id: 6,
+      name: "Customer Loyalty Mobile App",
+      description: "Led the end-to-end design, development, and delivery of a native mobile loyalty application for a major healthcare provider in Mexico, published on both the App Store and Google Play Store. The app featured comprehensive customer engagement tools, rewards programs, and gamification elements designed to enhance user experience and incentivize continued platform usage.",
+      tags: ["Mobile", "Product", "2023"]
+    },
+    {
+      id: 7,
+      name: "Customizable Event Hub & Management Platform",
+      description: "Developed a comprehensive web and mobile application platform with modular architecture for trade shows and corporate events. The solution featured attendee registration with unique QR code access, networking capabilities, meeting scheduling, personalized agenda management for panels and workshops, and robust gamification modules including trivia competitions, scavenger hunts, and various prize giveaway mechanics. While not a full SaaS product, the platform's modular design enabled rapid customization for different clients and event types.",
+      tags: ["Custom Software", "Product", "2022 to 2023"]
     },
     {
       id: 13,
