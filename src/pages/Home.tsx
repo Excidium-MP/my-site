@@ -143,10 +143,12 @@ function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-accent-500 to-primary-600 rounded-full blur-2xl opacity-30 dark:opacity-20 animate-pulse"></div>
               
               {/* Main circle */}
-              <div className="relative w-full h-full bg-gradient-to-br from-primary-400 via-accent-400 to-primary-500 dark:from-primary-600 dark:via-accent-600 dark:to-primary-700 rounded-full shadow-2xl flex items-center justify-center border-4 border-white/20 dark:border-white/10">
-                <svg className="w-32 h-32 md:w-40 md:h-40 text-white/90 dark:text-white/70" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+              <div className="relative w-full h-full rounded-full shadow-2xl overflow-hidden border-4 border-white/20 dark:border-white/10">
+                <img 
+                  src="/profile.png" 
+                  alt="Manuel Palli" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </motion.div>
           </motion.div>
