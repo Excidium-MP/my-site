@@ -1,10 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import Layout from './components/Layout'
-import Home from './pages/Home'
-import About from './pages/About'
-import Projects from './pages/Projects'
-import Tools from './pages/Tools'
-import Contact from './pages/Contact'
+
+// Lazy load page components for better performance
+const Home = lazy(() => import('./pages/Home'))
+const About = lazy(() => import('./pages/About'))
+const Projects = lazy(() => import('./pages/Projects'))
+const Tools = lazy(() => import('./pages/Tools'))
+const Contact = lazy(() => import('./pages/Contact'))
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -27,23 +29,25 @@ function App() {
 
   return (
     <Layout darkMode={darkMode} toggleDarkMode={toggleDarkMode}>
-      <div className="scroll-smooth">
-        <section id="home">
-          <Home />
-        </section>
-        <section id="about">
-          <About />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-        <section id="tools">
-          <Tools />
-        </section>
-        <section id="contact">
-          <Contact />
-        </section>
-      </div>
+      <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary-600"></div></div>}>
+        <div className="scroll-smooth">
+          <section id="home">
+            <Home />
+          </section>
+          <section id="about">
+            <About />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
+          <section id="tools">
+            <Tools />
+          </section>
+          <section id="contact">
+            <Contact />
+          </section>
+        </div>
+      </Suspense>
     </Layout>
   )
 }

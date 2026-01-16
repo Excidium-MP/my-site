@@ -24,12 +24,12 @@ function Tools() {
       tools: [
         {
           name: "Google Suite",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/google.svg",
+          icon: "/google-suite-logo.png",
           link: "https://workspace.google.com/"
         },
         {
           name: "Microsoft Office",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/microsoftoffice.svg",
+          icon: "/microsoft-office-logo.png",
           link: "https://www.office.com/"
         }
       ]
@@ -40,23 +40,33 @@ function Tools() {
       tools: [
         {
           name: "Jira",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jira.svg",
+          icon: "/jira-logo.png",
           link: "https://www.atlassian.com/software/jira"
         },
         {
           name: "Confluence",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/confluence.svg",
+          icon: "/confluence-logo.png",
           link: "https://www.atlassian.com/software/confluence"
         },
         {
           name: "Miro",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/miro.svg",
+          icon: "/miro-logo.png",
           link: "https://miro.com/"
         },
         {
           name: "Monday.com",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/monday.svg",
+          icon: "/monday-logo.png",
           link: "https://monday.com/"
+        },
+        {
+          name: "Slack",
+          icon: "/slack-logo.png",
+          link: "https://slack.com/"
+        },
+        {
+          name: "ClickUp",
+          icon: "/clickup-logo.png",
+          link: "https://clickup.com/"
         }
       ]
     },
@@ -66,8 +76,13 @@ function Tools() {
       tools: [
         {
           name: "HubSpot",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/hubspot.svg",
+          icon: "/hubspot-logo.png",
           link: "https://www.hubspot.com/"
+        },
+        {
+          name: "Pipedrive",
+          icon: "/pipedrive-logo.png",
+          link: "https://www.pipedrive.com/"
         }
       ]
     },
@@ -77,27 +92,27 @@ function Tools() {
       tools: [
         {
           name: "ChatGPT",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/openai.svg",
+          icon: "/chatgpt-logo.png",
           link: "https://chat.openai.com/"
         },
         {
           name: "Grok",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/x.svg",
+          icon: "/grok-logo.png",
           link: "https://x.ai/"
         },
         {
           name: "Midjourney",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/midjourney.svg",
+          icon: "/midjourney-logo.png",
           link: "https://www.midjourney.com/"
         },
         {
           name: "Fireflies.ai",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/ai.svg",
+          icon: "/fireflies-logo.png",
           link: "https://fireflies.ai/"
         },
         {
           name: "Junie for WebStorm",
-          icon: "https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/jetbrains.svg",
+          icon: "/junie-logo.png",
           link: "https://www.jetbrains.com/webstorm/"
         }
       ]
@@ -221,7 +236,7 @@ function Tools() {
                         <img 
                           src={tool.icon} 
                           alt={`${tool.name} icon`}
-                          className="w-full h-full object-contain opacity-80 group-hover:opacity-100 transition-all duration-300 brightness-0 saturate-100 invert-[0.3] dark:invert-[0.85]"
+                          className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
                         />
                       </div>
 

@@ -183,13 +183,6 @@ function Projects() {
       name: "Customizable Event Hub & Management Platform",
       description: "Developed a comprehensive web and mobile application platform with modular architecture for trade shows and corporate events. The solution featured attendee registration with unique QR code access, networking capabilities, meeting scheduling, personalized agenda management for panels and workshops, and robust gamification modules including trivia competitions, scavenger hunts, and various prize giveaway mechanics. While not a full SaaS product, the platform's modular design enabled rapid customization for different clients and event types.",
       tags: ["Custom Software", "Product", "2022 to 2023"]
-    },
-    {
-      id: 13,
-      name: "Trantorian - Strategy Blockchain Game",
-      description: "Trantorian was my deep dive into the wild world of blockchain gaming: an ambitious 4X space strategy game where players would build empires, trade assets on-chain, and battle across galaxies.\n\nFor almost two years I wore many different hats:\nI was behind partnerships and networked like crazy in the blockchain/gaming space connecting with other projects, influencers, and ecosystems.\nKept an eye on pretty much every moving part of development: from tweaking game mechanics and economy balance to making sure the tech side stayed on track with our distributed dev team.\nWorked hand-in-hand with the community and social media team and got to represent the project on stage at a couple of panels in Dubai and New York which was definitely a highlight, meeting awesome people and soaking up knowledge from the industry's sharpest minds.\n\nIn the end, the game never made it to full launch, but honestly? I wouldn't trade the experience.",
-      tags: ["Games", "Blockchain", "Unity", "Mobile", "2022 to 2023"],
-      image: "/trantorian-thumb.png"
     }
   ]
 
