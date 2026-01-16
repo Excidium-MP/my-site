@@ -1,9 +1,9 @@
 import { motion, Variants } from 'framer-motion'
-import { useState } from 'react'
+import { useState, ReactNode } from 'react'
 
 interface Tool {
   name: string
-  icon: string
+  icon: ReactNode
   link: string
   description?: string
 }
@@ -24,12 +24,25 @@ function Tools() {
       tools: [
         {
           name: "Google Suite",
-          icon: "/google-suite-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#4285F4" d="M22.5 12c0-.8-.1-1.5-.2-2.2H12v4.2h5.9c-.3 1.3-1 2.4-2.1 3.1v2.6h3.4c2-1.8 3.3-4.6 3.3-7.7z"/>
+              <path fill="#34A853" d="M12 22.7c2.9 0 5.3-1 7.1-2.6l-3.4-2.6c-1 .7-2.2 1.1-3.7 1.1-2.8 0-5.2-1.9-6.1-4.5H2.4v2.8c1.8 3.5 5.5 5.8 9.6 5.8z"/>
+              <path fill="#FBBC05" d="M5.9 14.1c-.2-.7-.3-1.4-.3-2.1s.1-1.4.3-2.1V7.1H2.4C1.6 8.9 1.1 10.4 1.1 12s.5 3.1 1.3 4.9l3.5-2.8z"/>
+              <path fill="#EA4335" d="M12 5.3c1.6 0 3 .5 4.1 1.6l3.1-3.1C17.3 2 14.9 1.3 12 1.3 7.9 1.3 4.2 3.6 2.4 7.1l3.5 2.8c.9-2.6 3.3-4.6 6.1-4.6z"/>
+            </svg>
+          ),
           link: "https://workspace.google.com/"
         },
         {
           name: "Microsoft Office",
-          icon: "/microsoft-office-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#D83B01" d="M11 2L2 3.5v17L11 22V2z"/>
+              <path fill="#EA3E23" d="M22 5h-11v14h11V5z"/>
+              <path fill="#F2F2F2" d="M16.5 8.5h-3v7h3v-7z"/>
+            </svg>
+          ),
           link: "https://www.office.com/"
         }
       ]
@@ -40,32 +53,67 @@ function Tools() {
       tools: [
         {
           name: "Jira",
-          icon: "/jira-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#0052CC" d="M11.531 10.154L1.314 0H0v11.69c0 .644.52 1.163 1.163 1.163h10.368L11.531 10.154z"/>
+              <path fill="#0052CC" d="M11.531 10.154l10.217 10.154L24 24V12.31c0-.644-.52-1.164-1.164-1.164H12.469L11.531 10.154z" opacity=".8"/>
+              <path fill="#2684FF" d="M11.531 10.154L1.314 20.308l1.314 1.314c.644.644 1.688.644 2.332 0L11.531 15.05l6.571 6.572c.644.644 1.688.644 2.332 0l1.314-1.314L11.531 10.154z"/>
+            </svg>
+          ),
           link: "https://www.atlassian.com/software/jira"
         },
         {
           name: "Confluence",
-          icon: "/confluence-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#0052CC" d="M12.469 13.846L22.686 24H24V12.31c0-.644-.52-1.163-1.163-1.163H12.469v2.699z"/>
+              <path fill="#0052CC" d="M12.469 13.846l-10.217-10.154L0 0v11.69c0 .644.52 1.164 1.164 1.164h10.367l.938.992z" opacity=".8"/>
+              <path fill="#2684FF" d="M12.469 13.846l10.217-10.154-1.314-1.314c-.644-.644-1.688-.644-2.332 0l-6.571 6.572-6.571-6.572c-.644-.644-1.688-.644-2.332 0L2.252 3.692l10.217 10.154z"/>
+            </svg>
+          ),
           link: "https://www.atlassian.com/software/confluence"
         },
         {
           name: "Miro",
-          icon: "/miro-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#FFD02F" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              <path fill="#050038" d="M11 7h2v10h-2z"/>
+            </svg>
+          ),
           link: "https://miro.com/"
         },
         {
           name: "Monday.com",
-          icon: "/monday-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <circle cx="6" cy="12" r="3" fill="#FF3D57"/>
+              <circle cx="12" cy="12" r="3" fill="#FFCB00"/>
+              <circle cx="18" cy="12" r="3" fill="#00C875"/>
+            </svg>
+          ),
           link: "https://monday.com/"
         },
         {
           name: "Slack",
-          icon: "/slack-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#36C5F0" d="M5 10c0-1.1.9-2 2-2h2v2H7c-1.1 0-2-.9-2-2zm2-7c1.1 0 2 .9 2 2v5H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2z"/>
+              <path fill="#2EB67D" d="M14 5c1.1 0 2 .9 2 2v2h-2c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2zm7 2c0 1.1-.9 2-2 2h-5v-2c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2z"/>
+              <path fill="#ECB22E" d="M19 14c0 1.1-.9 2-2 2h-2v-2h2c1.1 0 2 .9 2 2zm-2 7c-1.1 0-2-.9-2-2v-5h2c1.1 0 2 .9 2 2v3c0 1.1-.9 2-2 2z"/>
+              <path fill="#E01E5A" d="M10 19c-1.1 0-2-.9-2-2v-2h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2zm-7-2c0-1.1.9-2 2-2h5v2c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2z"/>
+            </svg>
+          ),
           link: "https://slack.com/"
         },
         {
           name: "ClickUp",
-          icon: "/clickup-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#7B68EE" d="M12 2L4 10h16L12 2z"/>
+              <path fill="#FF00FF" d="M4 14h16l-8 8-8-8z"/>
+            </svg>
+          ),
           link: "https://clickup.com/"
         }
       ]
@@ -76,12 +124,21 @@ function Tools() {
       tools: [
         {
           name: "HubSpot",
-          icon: "/hubspot-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#FF7A59" d="M18.9 10.3c-.6 0-1.1.2-1.5.5L14 8.2c.1-.4.1-.7.1-1.1 0-2.3-1.9-4.1-4.1-4.1S5.9 4.8 5.9 7.1c0 .4 0 .7.1 1.1l-3.4 2.6c-.4-.3-.9-.5-1.5-.5-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5c.6 0 1.1-.2 1.5-.5l3.4 2.6c-.1.4-.1.7-.1 1.1 0 2.3 1.9 4.1 4.1 4.1s4.1-1.8 4.1-4.1c0-.4 0-.7-.1-1.1l3.4-2.6c.4.3.9.5 1.5.5 1.4 0 2.5-1.1 2.5-2.5s-1.1-2.5-2.5-2.5zm-8.9-4.1c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5z"/>
+            </svg>
+          ),
           link: "https://www.hubspot.com/"
         },
         {
           name: "Pipedrive",
-          icon: "/pipedrive-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#222222" className="dark:fill-white" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              <path fill="#00B67A" d="M13 7h-2v10h2z"/>
+            </svg>
+          ),
           link: "https://www.pipedrive.com/"
         }
       ]
@@ -92,27 +149,49 @@ function Tools() {
       tools: [
         {
           name: "ChatGPT",
-          icon: "/chatgpt-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#74aa9c" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5122-4.9102 6.0462 6.0462 0 0 0-4.303-3.1204 6.0858 6.0858 0 0 0-5.1863.9572 6.0566 6.0566 0 0 0-2.8341 3.9056 5.9818 5.9818 0 0 0-3.3283 1.1099 6.0483 6.0483 0 0 0-2.3168 3.7314 6.0863 6.0863 0 0 0 .5245 4.9131 6.046 6.046 0 0 0 4.303 3.1204 6.0858 6.0858 0 0 0 5.1863-.9572 6.0566 6.0566 0 0 0 2.8341-3.9056 5.9818 5.9818 0 0 0 3.3283-1.1099 6.0483 6.0483 0 0 0 2.3168-3.7314 6.0833 6.0833 0 0 0-.5122-4.9131zm-10.282 12.3702a4.57 4.57 0 0 1-2.203-.5646l.092-.0525 3.3934-1.9213a.816.816 0 0 0 .4102-.711v-4.83l1.7144.99a.074.074 0 0 1 .0385.0645v3.911a4.5938 4.5938 0 0 1-3.4455 4.1139zm-8.8143-6.52a4.5681 4.5681 0 0 1-.1683-2.2715l.092.0525 3.3934 1.9213a.8159.8159 0 0 0 .8204 0l4.1827-2.415v1.98a.0741.0741 0 0 1-.0385.0645l-3.3868 1.9547a4.5938 4.5938 0 0 1-4.8929-.2865zm-1.0289-8.5252a4.5681 4.5681 0 0 1 2.0347-1.7069l.092.0525 3.3934 1.9213a.816.816 0 0 0 .4102.1086h.0001a.8159.8159 0 0 0 .4102-.1086l4.1827-2.415v-1.98a.0742.0742 0 0 1 .0385-.0645l3.3868 1.9547a4.5938 4.5938 0 0 1 1.5473 4.6738z"/>
+            </svg>
+          ),
           link: "https://chat.openai.com/"
         },
         {
           name: "Grok",
-          icon: "/grok-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#000000" className="dark:fill-white" d="M12 2L2 22h20L12 2zm0 4.5L18.5 19H5.5L12 6.5z"/>
+            </svg>
+          ),
           link: "https://x.ai/"
         },
         {
           name: "Midjourney",
-          icon: "/midjourney-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="1"/>
+              <circle cx="12" cy="12" r="6" fill="currentColor" opacity="0.3"/>
+            </svg>
+          ),
           link: "https://www.midjourney.com/"
         },
         {
           name: "Fireflies.ai",
-          icon: "/fireflies-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#6B46C1" d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.2-6.3-4.6-6.3 4.6 2.3-7.2-6-4.6h7.6z"/>
+            </svg>
+          ),
           link: "https://fireflies.ai/"
         },
         {
           name: "Junie for WebStorm",
-          icon: "/junie-logo.png",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#000000" className="dark:fill-white" d="M0 0v24h24V0H0zm20 20H4V4h16v16z"/>
+              <path fill="#000000" className="dark:fill-white" d="M17 17h-2V7h2v10zM13 17h-2V9h2v8zM9 17H7v-4h2v4z"/>
+            </svg>
+          ),
           link: "https://www.jetbrains.com/webstorm/"
         }
       ]
@@ -232,12 +311,8 @@ function Tools() {
                       }
                     `}>
                       {/* Icon */}
-                      <div className="w-12 h-12 mb-3 flex items-center justify-center">
-                        <img 
-                          src={tool.icon} 
-                          alt={`${tool.name} icon`}
-                          className="w-full h-full object-contain opacity-90 group-hover:opacity-100 transition-all duration-300"
-                        />
+                      <div className="w-12 h-12 mb-3 flex items-center justify-center text-neutral-800 dark:text-neutral-200 group-hover:scale-110 transition-transform duration-300">
+                        {tool.icon}
                       </div>
 
                       {/* Tool Name */}
