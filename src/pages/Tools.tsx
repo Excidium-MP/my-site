@@ -54,9 +54,7 @@ function Tools() {
           name: "Jira",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#0052CC" d="M11.53 10.154L1.314 0H0v11.69c0 .644.52 1.163 1.163 1.163h10.368L11.53 10.154z"/>
-              <path fill="#0052CC" d="M11.53 10.154l10.217 10.154L24 24V12.31c0-.644-.52-1.164-1.164-1.164H12.47l-.94-.992z" opacity=".8"/>
-              <path fill="#2684FF" d="M11.53 10.154L1.314 20.308l1.314 1.314c.644.644 1.688.644 2.332 0L11.53 15.05l6.571 6.572c.644.644 1.688.644 2.332 0l1.314-1.314-10.217-10.154z"/>
+              <path fill="#0052CC" d="M23.12 11.23l-10.35-10.35a1.16 1.16 0 0 0-1.64 0L.78 11.23a1.16 1.16 0 0 0 0 1.64l10.35 10.35a1.16 1.16 0 0 0 1.64 0l10.35-10.35a1.16 1.16 0 0 0 0-1.64zM12 19.33l-7.33-7.33 7.33-7.33 7.33 7.33z"/>
             </svg>
           ),
           link: "https://www.atlassian.com/software/jira"
@@ -65,9 +63,7 @@ function Tools() {
           name: "Confluence",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#0052CC" d="M12.469 13.846L22.686 24H24V12.31c0-.644-.52-1.163-1.163-1.163H12.469v2.699z"/>
-              <path fill="#0052CC" d="M12.469 13.846l-10.217-10.154L0 0v11.69c0 .644.52 1.164 1.164 1.164h10.367l.938.992z" opacity=".8"/>
-              <path fill="#2684FF" d="M12.469 13.846l10.217-10.154-1.314-1.314c-.644-.644-1.688-.644-2.332 0l-6.571 6.572-6.571-6.572c-.644-.644-1.688-.644-2.332 0L2.252 3.692l10.217 10.154z"/>
+              <path fill="#0052CC" d="M12 0L1.5 6v12L12 24l10.5-6V6L12 0zm0 4.5l6.5 3.75v7.5L12 19.5l-6.5-3.75v-7.5L12 4.5z"/>
             </svg>
           ),
           link: "https://www.atlassian.com/software/confluence"
@@ -76,7 +72,9 @@ function Tools() {
           name: "Monday.com",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#FF3D57" d="M6 3a3 3 0 100 6 3 3 0 000-6zM6 15a3 3 0 100 6 3 3 0 000-6zM12 9a3 3 0 100 6 3 3 0 000-6zM18 3a3 3 0 100 6 3 3 0 000-6zM18 15a3 3 0 100 6 3 3 0 000-6z"/>
+              <circle cx="6" cy="12" r="3" fill="#FF3D57" />
+              <circle cx="12" cy="12" r="3" fill="#FFCB00" />
+              <circle cx="18" cy="12" r="3" fill="#00C875" />
             </svg>
           ),
           link: "https://monday.com/"
@@ -85,10 +83,11 @@ function Tools() {
           name: "Slack",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#36C5F0" d="M5.045 15.114a2.52 2.52 0 01-2.523-2.52c0-1.392 1.13-2.523 2.523-2.523h2.52v5.043h-2.52zm0-10.086a2.52 2.52 0 012.52 2.52v2.523h-2.52a2.52 2.52 0 110-5.043z"/>
-              <path fill="#2EB67D" d="M8.886 5.045a2.52 2.52 0 012.52-2.523c1.393 0 2.523 1.13 2.523 2.523v2.52h-5.043v-2.52zm10.086 0a2.52 2.52 0 01-2.52 2.52h-2.523V5.045a2.52 2.52 0 115.043 0z"/>
-              <path fill="#ECB22E" d="M18.955 8.886a2.52 2.52 0 012.523 2.52c0 1.393-1.13 2.523-2.523 2.523h-2.52V8.886h2.52zm0 10.086a2.52 2.52 0 01-2.52-2.52v-2.523h2.52a2.52 2.52 0 110 5.043z"/>
-              <path fill="#E01E5A" d="M15.114 18.955a2.52 2.52 0 01-2.52 2.523c-1.393 0-2.523-1.13-2.523-2.523v-2.52h5.043v2.52zm-10.086 0a2.52 2.52 0 012.52-2.52h2.523v2.52a2.52 2.52 0 11-5.043 0z"/>
+              <path fill="#e01e5a" d="M3.5,14.5a2,2,0,1,1-2-2h2v2Zm1,0a2,2,0,0,1,2-2h5v-5a2,2,0,1,1,2,2v5a2,2,0,0,1-2,2h-5a2,2,0,0,1-2-2Zm5-11a2,2,0,1,1,2,2v-2a2,2,0,0,1-2,2h-2a2,2,0,1,1,2-2Zm0,1a2,2,0,0,1,2,2v5h-5a2,2,0,1,1,2-2h5a2,2,0,0,1,2-2v-5a2,2,0,0,1-2-2Zm11,5a2,2,0,1,1,2,2h-2v-2Zm-1,0a2,2,0,0,1-2,2h-5v5a2,2,0,1,1-2-2v-5a2,2,0,0,1,2-2h5a2,2,0,0,1,2,2Zm-5,11a2,2,0,1,1-2-2v2a2,2,0,0,1,2-2h2a2,2,0,1,1-2,2Zm0-1a2,2,0,0,1-2-2v-5h5a2,2,0,1,1-2,2h-5a2,2,0,0,1-2,2v5a2,2,0,0,1,2,2Z"/>
+              <path fill="#36c5f0" d="M2.5,9.5a2,2,0,1,0,2,2v-2a2,2,0,0,0-2,2Z"/>
+              <path fill="#2eb67d" d="M14.5,2.5a2,2,0,1,0-2,2h2a2,2,0,0,0,2-2Z"/>
+              <path fill="#ecb22e" d="M21.5,14.5a2,2,0,1,0-2-2h2a2,2,0,0,0,2-2Z"/>
+              <path fill="#e01e5a" d="M9.5,21.5a2,2,0,1,0,2-2v2a2,2,0,0,0,2-2Z"/>
             </svg>
           ),
           link: "https://slack.com/"
@@ -97,8 +96,8 @@ function Tools() {
           name: "ClickUp",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#7B68EE" d="M12 2L4 10h16L12 2z"/>
-              <path fill="#FF00FF" d="M4 14h16l-8 8-8-8z"/>
+              <path fill="#7B68EE" d="M12 2.2c-3.2 0-5.8 2.6-5.8 5.8 0 .4 0 .8.1 1.2l3.4-1.2c-.1-.2-.1-.5-.1-.7 0-1.3 1.1-2.4 2.4-2.4s2.4 1.1 2.4 2.4c0 .3 0 .5-.1.7l3.4 1.2c.1-.4.1-.8.1-1.2 0-3.2-2.6-5.8-5.8-5.8z"/>
+              <path fill="#FF00FF" d="M12 11.8c-2.4 0-4.4 1.6-5.4 3.8l3.1 1.1c.4-1 1.4-1.6 2.3-1.6s1.9.6 2.3 1.6l3.1-1.1c-1-2.2-3-3.8-5.4-3.8z"/>
             </svg>
           ),
           link: "https://clickup.com/"
@@ -107,8 +106,9 @@ function Tools() {
           name: "Trello",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#0079BF" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-              <path fill="#FFFFFF" d="M10.5 6h-3.5c-.28 0-.5.22-.5.5v9c0 .28.22.5.5.5h3.5c.28 0 .5-.22.5-.5v-9c0-.28-.22-.5-.5-.5zm6.5 0h-3.5c-.28 0-.5.22-.5.5v5c0 .28.22.5.5h3.5c.28 0 .5-.22.5-.5v-5c0-.28-.22-.5-.5-.5z"/>
+              <rect width="20" height="20" x="2" y="2" rx="3" fill="#0079BF" />
+              <rect width="4" height="12" x="6" y="6" rx="1" fill="#FFFFFF" />
+              <rect width="4" height="7" x="14" y="6" rx="1" fill="#FFFFFF" />
             </svg>
           ),
           link: "https://trello.com/"
@@ -117,9 +117,9 @@ function Tools() {
           name: "Asana",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#F06595" d="M12 2l4.5 7.8h-9L12 2z"/>
-              <path fill="#F06595" d="M16.5 14.2l4.5 7.8h-9l4.5-7.8z"/>
-              <path fill="#F06595" d="M7.5 14.2l4.5 7.8h-9l4.5-7.8z"/>
+              <circle cx="12" cy="7" r="3.5" fill="#F06595" />
+              <circle cx="7" cy="15.5" r="3.5" fill="#F06595" />
+              <circle cx="17" cy="15.5" r="3.5" fill="#F06595" />
             </svg>
           ),
           link: "https://asana.com/"
@@ -134,7 +134,7 @@ function Tools() {
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
               <path fill="#FFD02F" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/>
-              <path fill="#050038" d="M16.32 15.36c.48-2.64-1.2-5.28-3.84-5.76-1.44-.24-2.88 0-4.08.72L6.72 6.48c-.24-.48-.96-.48-1.2 0-.24.48 0 1.2.48 1.44l1.68 3.84c-1.44 1.68-1.68 4.32-.48 6.48 1.2 2.16 3.84 2.88 6.24 1.92 1.44-.48 2.4-1.68 2.88-3.12z"/>
+              <path fill="#050038" d="M12 5.5l1.5 2.5 1.5-2.5h3L15 10.5l3 5h-3l-1.5-2.5-1.5 2.5h-3l3-5-3-5h3z"/>
             </svg>
           ),
           link: "https://miro.com/"
@@ -143,9 +143,8 @@ function Tools() {
           name: "Whimsical",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#9C52FF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
-              <path fill="#9C52FF" d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" opacity=".5"/>
-              <path fill="#9C52FF" d="M12 8.5c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5z"/>
+              <path fill="#9C52FF" d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm0 18a8 8 0 1 1 8-8 8 8 0 0 1-8 8z"/>
+              <path fill="#9C52FF" d="M12 6.5l2 3.5 3.5 2-3.5 2-2 3.5-2-3.5-3.5-2 3.5-2z"/>
             </svg>
           ),
           link: "https://whimsical.com/"
@@ -154,11 +153,11 @@ function Tools() {
           name: "Figma",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#F24E1E" d="M12 12c1.657 0 3-1.343 3-3s-1.343-3-3-3H9v6h3z"/>
-              <path fill="#FF7262" d="M9 12a3 3 0 110-6 3 3 0 010 6z"/>
-              <path fill="#A259FF" d="M9 18a3 3 0 110-6 3 3 0 010 6z"/>
-              <path fill="#1ABCFE" d="M12 18a3 3 0 110-6 3 3 0 010 6z"/>
-              <path fill="#0ACF83" d="M9 24a3 3 0 110-6 3 3 0 010 6z"/>
+              <path fill="#F24E1E" d="M9 3a3 3 0 0 0 0 6h3V3H9z"/>
+              <path fill="#FF7262" d="M15 3a3 3 0 1 0-3 3h3V3z"/>
+              <path fill="#A259FF" d="M9 9a3 3 0 0 0 0 6h3V9H9z"/>
+              <path fill="#1ABCFE" d="M15 9a3 3 0 1 0-3 3h3V9z"/>
+              <path fill="#0ACF83" d="M9 15a3 3 0 1 0 3 3v-3H9z"/>
             </svg>
           ),
           link: "https://www.figma.com/"
@@ -172,7 +171,7 @@ function Tools() {
           name: "HubSpot",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#FF7A59" d="M18.9 10.3c-.6 0-1.1.2-1.5.5L14 8.2c.1-.4.1-.7.1-1.1 0-2.3-1.9-4.1-4.1-4.1S5.9 4.8 5.9 7.1c0 .4 0 .7.1 1.1l-3.4 2.6c-.4-.3-.9-.5-1.5-.5-1.4 0-2.5 1.1-2.5 2.5s1.1 2.5 2.5 2.5c.6 0 1.1-.2 1.5-.5l3.4 2.6c-.1.4-.1.7-.1 1.1 0 2.3 1.9 4.1 4.1 4.1s4.1-1.8 4.1-4.1c0-.4 0-.7-.1-1.1l3.4-2.6c.4.3.9.5 1.5.5 1.4 0 2.5-1.1 2.5-2.5s-1.1-2.5-2.5-2.5zm-8.9-4.1c1.4 0 2.5 1.1 2.5 2.5s-1.1 2.5-2.5 2.5-2.5-1.1-2.5-2.5 1.1-2.5 2.5-2.5z"/>
+              <path fill="#FF7A59" d="M21.2 11.5c-.6 0-1.1.3-1.4.7l-2.6-1.5V9.1c1-.3 1.7-1.2 1.7-2.3 0-1.3-1.1-2.4-2.4-2.4S14 5.5 14 6.8c0 1.1.7 2 1.7 2.3v1.6l-2.6 1.5c-.3-.4-.8-.7-1.4-.7-1 0-1.8.8-1.8 1.8s.8 1.8 1.8 1.8c.6 0 1.1-.3 1.4-.7l2.6 1.5v1.6c-1 .3-1.7 1.2-1.7 2.3 0 1.3 1.1 2.4 2.4 2.4s2.4-1.1 2.4-2.4c0-1.1-.7-2-1.7-2.3v-1.6l2.6-1.5c.3.4.8.7 1.4.7 1 0 1.8-.8 1.8-1.8s-.8-1.8-1.8-1.8zM16.5 6c.4 0 .8.4.8.8s-.4.8-.8.8-.8-.4-.8-.8.4-.8.8-.8zm0 12c-.4 0-.8-.4-.8-.8s.4-.8.8-.8.8.4.8.8-.4.8-.8.8zm-4.7-4.2c-.4 0-.8-.4-.8-.8s.4-.8.8-.8.8.4.8.8-.4.8-.8.8z"/>
             </svg>
           ),
           link: "https://www.hubspot.com/"
@@ -182,7 +181,7 @@ function Tools() {
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
               <path fill="#222222" className="dark:fill-white" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-              <path fill="#00B67A" d="M11 7h2v10h-2V7zm5 3h-2v7h2v-7zm-10 3h2v4H6v-4z"/>
+              <path fill="#00B67A" d="M7 11h2v6H7zm4-4h2v10h-2zm4 6h2v4h-2z"/>
             </svg>
           ),
           link: "https://www.pipedrive.com/"
@@ -196,7 +195,7 @@ function Tools() {
           name: "ChatGPT",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#74aa9c" d="M22.28 9.82a5.985 5.985 0 00-.51-4.91 6.046 6.046 0 00-4.3-3.12 6.086 6.086 0 00-5.19.96 6.057 6.057 0 00-2.83 3.91 5.982 5.982 0 00-3.33 1.11 6.048 6.048 0 00-2.32 3.73 6.086 6.086 0 00.52 4.91 6.046 6.046 0 004.3 3.12 6.086 6.086 0 005.19-.96 6.057 6.057 0 002.83-3.91 5.982 5.982 0 003.33-1.11 6.048 6.048 0 002.32-3.73 6.083 6.083 0 00-.51-4.91zm-10.28 12.37a4.57 4.57 0 01-2.2-.56l.09-.05 3.39-1.92c.26-.15.41-.43.41-.73v-4.83l1.71.99c.02.01.04.04.04.06v3.91a4.594 4.594 0 01-3.45 4.11z"/>
+              <path fill="#74aa9c" d="M22.28 9.82a5.985 5.985 0 00-.51-4.91 6.046 6.046 0 00-4.3-3.12 6.086 6.086 0 00-5.19.96 6.057 6.057 0 00-2.83 3.91 5.982 5.982 0 00-3.33 1.11 6.048 6.048 0 00-2.32 3.73 6.086 6.086 0 00.52 4.91 6.046 6.046 0 004.3 3.12 6.086 6.086 0 005.19-.96 6.057 6.057 0 002.83-3.91 5.982 5.982 0 003.33-1.11 6.048 6.048 0 002.32-3.73 6.083 6.083 0 00-.51-4.91zm-10.28 12.37a4.57 4.57 0 01-2.2-.56l.09-.05 3.39-1.92c.26-.15.41-.43.41-.73v-4.83l1.71.99c.02.01.04.04.04.06v3.91a4.594 4.594 0 01-3.45 4.11zm10.28-12.37a4.57 4.57 0 01-2.2-.56l.09-.05 3.39-1.92c.26-.15.41-.43.41-.73v-4.83l1.71.99c.02.01.04.04.04.06v3.91a4.594 4.594 0 01-3.45 4.11z"/>
             </svg>
           ),
           link: "https://chat.openai.com/"
@@ -206,7 +205,7 @@ function Tools() {
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
               <path fill="#D97757" d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"/>
-              <circle cx="12" cy="12" r="3" fill="#D97757" opacity="0.5"/>
+              <circle cx="12" cy="12" r="3" fill="#D97757" />
             </svg>
           ),
           link: "https://claude.ai/"
@@ -214,9 +213,8 @@ function Tools() {
         {
           name: "Grok",
           icon: (
-            <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+            <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path className="stroke-neutral-800 dark:stroke-white" d="M4 4l16 16M4 20L20 4" strokeLinecap="round"/>
-              <circle cx="12" cy="12" r="9" className="stroke-neutral-800 dark:stroke-white"/>
             </svg>
           ),
           link: "https://x.ai/"
@@ -225,8 +223,9 @@ function Tools() {
           name: "Midjourney",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-              <path fill="currentColor" d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" opacity="0.5"/>
+              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="1"/>
+              <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" strokeWidth="1" opacity="0.5"/>
+              <circle cx="12" cy="12" r="2" fill="currentColor"/>
             </svg>
           ),
           link: "https://www.midjourney.com/"
@@ -236,7 +235,6 @@ function Tools() {
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
               <path fill="#6B46C1" d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.2-6.3-4.6-6.3 4.6 2.3-7.2-6-4.6h7.6z"/>
-              <path fill="#9F7AEA" d="M12 5.5l1.5 4.5H18l-3.5 2.5 1.5 4.5-4-3-4 3 1.5-4.5L6 10h4.5z" opacity="0.5"/>
             </svg>
           ),
           link: "https://fireflies.ai/"
@@ -247,7 +245,7 @@ function Tools() {
             <svg viewBox="0 0 24 24" className="w-full h-full">
               <rect width="20" height="20" x="2" y="2" rx="4" fill="#000000" className="dark:fill-white" opacity="0.1"/>
               <path fill="#000000" className="dark:fill-white" d="M12 4c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"/>
-              <path fill="#000000" className="dark:fill-white" d="M10.5 8.5v7l5-3.5-5-3.5z"/>
+              <path fill="#000000" className="dark:fill-white" d="M12 8l4 4-4 4V8z"/>
             </svg>
           ),
           link: "https://www.jetbrains.com/webstorm/"
