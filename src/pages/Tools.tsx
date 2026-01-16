@@ -49,7 +49,6 @@ function Tools() {
     },
     {
       title: "Project Management & Collaboration",
-      description: "Platforms for team coordination, task tracking, and agile project delivery.",
       tools: [
         {
           name: "Jira",
@@ -72,16 +71,6 @@ function Tools() {
             </svg>
           ),
           link: "https://www.atlassian.com/software/confluence"
-        },
-        {
-          name: "Miro",
-          icon: (
-            <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#FFD02F" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/>
-              <path fill="#050038" d="M16.32 15.36c.48-2.64-1.2-5.28-3.84-5.76-1.44-.24-2.88 0-4.08.72L6.72 6.48c-.24-.48-.96-.48-1.2 0-.24.48 0 1.2.48 1.44l1.68 3.84c-1.44 1.68-1.68 4.32-.48 6.48 1.2 2.16 3.84 2.88 6.24 1.92 1.44-.48 2.4-1.68 2.88-3.12z"/>
-            </svg>
-          ),
-          link: "https://miro.com/"
         },
         {
           name: "Monday.com",
@@ -119,7 +108,7 @@ function Tools() {
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
               <path fill="#0079BF" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
-              <path fill="#FFFFFF" d="M10.5 6h-3.5c-.28 0-.5.22-.5.5v9c0 .28.22.5.5.5h3.5c.28 0 .5-.22.5-.5v-9c0-.28-.22-.5-.5-.5zm6.5 0h-3.5c-.28 0-.5.22-.5.5v5c0 .28.22.5.5.5h3.5c.28 0 .5-.22.5-.5v-5c0-.28-.22-.5-.5-.5z"/>
+              <path fill="#FFFFFF" d="M10.5 6h-3.5c-.28 0-.5.22-.5.5v9c0 .28.22.5.5.5h3.5c.28 0 .5-.22.5-.5v-9c0-.28-.22-.5-.5-.5zm6.5 0h-3.5c-.28 0-.5.22-.5.5v5c0 .28.22.5.5h3.5c.28 0 .5-.22.5-.5v-5c0-.28-.22-.5-.5-.5z"/>
             </svg>
           ),
           link: "https://trello.com/"
@@ -140,6 +129,27 @@ function Tools() {
     {
       title: "Design & Creative",
       tools: [
+        {
+          name: "Miro",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#FFD02F" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/>
+              <path fill="#050038" d="M16.32 15.36c.48-2.64-1.2-5.28-3.84-5.76-1.44-.24-2.88 0-4.08.72L6.72 6.48c-.24-.48-.96-.48-1.2 0-.24.48 0 1.2.48 1.44l1.68 3.84c-1.44 1.68-1.68 4.32-.48 6.48 1.2 2.16 3.84 2.88 6.24 1.92 1.44-.48 2.4-1.68 2.88-3.12z"/>
+            </svg>
+          ),
+          link: "https://miro.com/"
+        },
+        {
+          name: "Whimsical",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#9C52FF" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8z"/>
+              <path fill="#9C52FF" d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" opacity=".5"/>
+              <path fill="#9C52FF" d="M12 8.5c-1.93 0-3.5 1.57-3.5 3.5s1.57 3.5 3.5 3.5 3.5-1.57 3.5-3.5-1.57-3.5-3.5-3.5z"/>
+            </svg>
+          ),
+          link: "https://whimsical.com/"
+        },
         {
           name: "Figma",
           icon: (
