@@ -115,6 +115,26 @@ function Tools() {
             </svg>
           ),
           link: "https://clickup.com/"
+        },
+        {
+          name: "Trello",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#0079BF" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM10 16.5c0 .28-.22.5-.5.5h-3c-.28 0-.5-.22-.5-.5v-9c0-.28.22-.5.5-.5h3c.28 0 .5.22.5.5v9zm8-4c0 .28-.22.5-.5.5h-3c-.28 0-.5-.22-.5-.5v-5c0-.28.22-.5.5-.5h3c.28 0 .5.22.5.5v5z"/>
+            </svg>
+          ),
+          link: "https://trello.com/"
+        },
+        {
+          name: "Asana",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#F06595" d="M12 2l4.5 7.8h-9L12 2z"/>
+              <path fill="#F06595" d="M16.5 14.2l4.5 7.8h-9l4.5-7.8z"/>
+              <path fill="#F06595" d="M7.5 14.2l4.5 7.8h-9l4.5-7.8z"/>
+            </svg>
+          ),
+          link: "https://asana.com/"
         }
       ]
     },
@@ -174,6 +194,15 @@ function Tools() {
             </svg>
           ),
           link: "https://chat.openai.com/"
+        },
+        {
+          name: "Claude",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#D97757" d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"/>
+            </svg>
+          ),
+          link: "https://claude.ai/"
         },
         {
           name: "Grok",

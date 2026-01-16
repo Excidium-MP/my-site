@@ -106,6 +106,7 @@ function Projects() {
       description: "Worked on TRIPP, an innovative VR wellness and meditation application available across VR devices and mobile platforms. Contributed to the release of new immersive content and experiences. Most notably, played a key role in the launch of TRIPP on the Apple Vision Pro device, being part of the team that brought the app to Apple's groundbreaking spatial computing platform. This experience provided invaluable insight into launching products on cutting-edge hardware and being part of a major Apple product ecosystem launch.",
       tags: ["VR", "Mobile", "Art", "Growth", "Product", "Marketing", "2023 to 2025"],
       image: "/tripp-thumb.png",
+      logo: "/tripp-logo.png",
       link: "https://www.tripp.com/"
     },
     {
@@ -146,6 +147,7 @@ function Projects() {
       tags: ["Custom Software", "2021 to 2023"],
       image: "/cleverlit-4.png",
       images: ["/cleverlit-1.png", "/cleverlit-2.png", "/cleverlit-3.png", "/cleverlit-4.png", "/cleverlit-5.png", "/cleverlit-6.png"],
+      logo: "/cleverlit-logo.png",
       link: "https://www.cleverlit.com/es"
     },
     {

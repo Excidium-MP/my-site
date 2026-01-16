@@ -143,11 +143,11 @@ function Home() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary-500 via-accent-500 to-primary-600 rounded-full blur-2xl opacity-30 dark:opacity-20 animate-pulse"></div>
               
               {/* Main circle */}
-              <div className="relative w-full h-full rounded-full shadow-2xl overflow-hidden border-4 border-white/20 dark:border-white/10">
+              <div className="relative w-full h-full rounded-full shadow-2xl overflow-hidden border-4 border-white/20 dark:border-white/10 flex items-center justify-center">
                 <img 
                   src="/profile.png" 
                   alt="Manuel Palli" 
-                  className="w-full h-full object-contain p-4"
+                  className="w-full h-full object-cover"
                 />
               </div>
             </motion.div>
