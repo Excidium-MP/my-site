@@ -55,9 +55,9 @@ function Tools() {
           name: "Jira",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#0052CC" d="M11.531 10.154L1.314 0H0v11.69c0 .644.52 1.163 1.163 1.163h10.368L11.531 10.154z"/>
-              <path fill="#0052CC" d="M11.531 10.154l10.217 10.154L24 24V12.31c0-.644-.52-1.164-1.164-1.164H12.469L11.531 10.154z" opacity=".8"/>
-              <path fill="#2684FF" d="M11.531 10.154L1.314 20.308l1.314 1.314c.644.644 1.688.644 2.332 0L11.531 15.05l6.571 6.572c.644.644 1.688.644 2.332 0l1.314-1.314L11.531 10.154z"/>
+              <path fill="#0052CC" d="M11.53 10.154L1.314 0H0v11.69c0 .644.52 1.163 1.163 1.163h10.368L11.53 10.154z"/>
+              <path fill="#0052CC" d="M11.53 10.154l10.217 10.154L24 24V12.31c0-.644-.52-1.164-1.164-1.164H12.47l-.94-.992z" opacity=".8"/>
+              <path fill="#2684FF" d="M11.53 10.154L1.314 20.308l1.314 1.314c.644.644 1.688.644 2.332 0L11.53 15.05l6.571 6.572c.644.644 1.688.644 2.332 0l1.314-1.314-10.217-10.154z"/>
             </svg>
           ),
           link: "https://www.atlassian.com/software/jira"
@@ -77,8 +77,8 @@ function Tools() {
           name: "Miro",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#FFD02F" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-              <path fill="#050038" d="M11 7h2v10h-2z"/>
+              <path fill="#FFD02F" d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0z"/>
+              <path fill="#050038" d="M16.32 15.36c.48-2.64-1.2-5.28-3.84-5.76-1.44-.24-2.88 0-4.08.72L6.72 6.48c-.24-.48-.96-.48-1.2 0-.24.48 0 1.2.48 1.44l1.68 3.84c-1.44 1.68-1.68 4.32-.48 6.48 1.2 2.16 3.84 2.88 6.24 1.92 1.44-.48 2.4-1.68 2.88-3.12z"/>
             </svg>
           ),
           link: "https://miro.com/"
@@ -87,9 +87,7 @@ function Tools() {
           name: "Monday.com",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <circle cx="6" cy="12" r="3" fill="#FF3D57"/>
-              <circle cx="12" cy="12" r="3" fill="#FFCB00"/>
-              <circle cx="18" cy="12" r="3" fill="#00C875"/>
+              <path fill="#FF3D57" d="M6 3a3 3 0 100 6 3 3 0 000-6zM6 15a3 3 0 100 6 3 3 0 000-6zM12 9a3 3 0 100 6 3 3 0 000-6zM18 3a3 3 0 100 6 3 3 0 000-6zM18 15a3 3 0 100 6 3 3 0 000-6z"/>
             </svg>
           ),
           link: "https://monday.com/"
@@ -98,10 +96,10 @@ function Tools() {
           name: "Slack",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#36C5F0" d="M5 10c0-1.1.9-2 2-2h2v2H7c-1.1 0-2-.9-2-2zm2-7c1.1 0 2 .9 2 2v5H7c-1.1 0-2-.9-2-2V5c0-1.1.9-2 2-2z"/>
-              <path fill="#2EB67D" d="M14 5c1.1 0 2 .9 2 2v2h-2c-1.1 0-2-.9-2-2V7c0-1.1.9-2 2-2zm7 2c0 1.1-.9 2-2 2h-5v-2c0-1.1.9-2 2-2h3c1.1 0 2 .9 2 2z"/>
-              <path fill="#ECB22E" d="M19 14c0 1.1-.9 2-2 2h-2v-2h2c1.1 0 2 .9 2 2zm-2 7c-1.1 0-2-.9-2-2v-5h2c1.1 0 2 .9 2 2v3c0 1.1-.9 2-2 2z"/>
-              <path fill="#E01E5A" d="M10 19c-1.1 0-2-.9-2-2v-2h2c1.1 0 2 .9 2 2v2c0 1.1-.9 2-2 2zm-7-2c0-1.1.9-2 2-2h5v2c0 1.1-.9 2-2 2H5c-1.1 0-2-.9-2-2z"/>
+              <path fill="#36C5F0" d="M5.045 15.114a2.52 2.52 0 01-2.523-2.52c0-1.392 1.13-2.523 2.523-2.523h2.52v5.043h-2.52zm0-10.086a2.52 2.52 0 012.52 2.52v2.523h-2.52a2.52 2.52 0 110-5.043z"/>
+              <path fill="#2EB67D" d="M8.886 5.045a2.52 2.52 0 012.52-2.523c1.393 0 2.523 1.13 2.523 2.523v2.52h-5.043v-2.52zm10.086 0a2.52 2.52 0 01-2.52 2.52h-2.523V5.045a2.52 2.52 0 115.043 0z"/>
+              <path fill="#ECB22E" d="M18.955 8.886a2.52 2.52 0 012.523 2.52c0 1.393-1.13 2.523-2.523 2.523h-2.52V8.886h2.52zm0 10.086a2.52 2.52 0 01-2.52-2.52v-2.523h2.52a2.52 2.52 0 110 5.043z"/>
+              <path fill="#E01E5A" d="M15.114 18.955a2.52 2.52 0 01-2.52 2.523c-1.393 0-2.523-1.13-2.523-2.523v-2.52h5.043v2.52zm-10.086 0a2.52 2.52 0 012.52-2.52h2.523v2.52a2.52 2.52 0 11-5.043 0z"/>
             </svg>
           ),
           link: "https://slack.com/"
@@ -120,7 +118,8 @@ function Tools() {
           name: "Trello",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#0079BF" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM10 16.5c0 .28-.22.5-.5.5h-3c-.28 0-.5-.22-.5-.5v-9c0-.28.22-.5.5-.5h3c.28 0 .5.22.5.5v9zm8-4c0 .28-.22.5-.5.5h-3c-.28 0-.5-.22-.5-.5v-5c0-.28.22-.5.5-.5h3c.28 0 .5.22.5.5v5z"/>
+              <path fill="#0079BF" d="M21 3H3c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2z"/>
+              <path fill="#FFFFFF" d="M10.5 6h-3.5c-.28 0-.5.22-.5.5v9c0 .28.22.5.5.5h3.5c.28 0 .5-.22.5-.5v-9c0-.28-.22-.5-.5-.5zm6.5 0h-3.5c-.28 0-.5.22-.5.5v5c0 .28.22.5.5.5h3.5c.28 0 .5-.22.5-.5v-5c0-.28-.22-.5-.5-.5z"/>
             </svg>
           ),
           link: "https://trello.com/"
@@ -140,13 +139,12 @@ function Tools() {
     },
     {
       title: "Design & Creative",
-      description: "Tools for UI/UX design, visual collaboration, and prototyping.",
       tools: [
         {
           name: "Figma",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#F24E1E" d="M12 12a3 3 0 110-6 3 3 0 010 6z"/>
+              <path fill="#F24E1E" d="M12 12c1.657 0 3-1.343 3-3s-1.343-3-3-3H9v6h3z"/>
               <path fill="#FF7262" d="M9 12a3 3 0 110-6 3 3 0 010 6z"/>
               <path fill="#A259FF" d="M9 18a3 3 0 110-6 3 3 0 010 6z"/>
               <path fill="#1ABCFE" d="M12 18a3 3 0 110-6 3 3 0 010 6z"/>
@@ -159,7 +157,6 @@ function Tools() {
     },
     {
       title: "CRM & Sales",
-      description: "Customer relationship management and sales automation platform.",
       tools: [
         {
           name: "HubSpot",
@@ -175,7 +172,7 @@ function Tools() {
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
               <path fill="#222222" className="dark:fill-white" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
-              <path fill="#00B67A" d="M13 7h-2v10h2z"/>
+              <path fill="#00B67A" d="M11 7h2v10h-2V7zm5 3h-2v7h2v-7zm-10 3h2v4H6v-4z"/>
             </svg>
           ),
           link: "https://www.pipedrive.com/"
@@ -184,13 +181,12 @@ function Tools() {
     },
     {
       title: "AI & Innovation Tools",
-      description: "Cutting-edge AI assistants for content creation, design, and productivity enhancement.",
       tools: [
         {
           name: "ChatGPT",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#74aa9c" d="M22.2819 9.8211a5.9847 5.9847 0 0 0-.5122-4.9102 6.0462 6.0462 0 0 0-4.303-3.1204 6.0858 6.0858 0 0 0-5.1863.9572 6.0566 6.0566 0 0 0-2.8341 3.9056 5.9818 5.9818 0 0 0-3.3283 1.1099 6.0483 6.0483 0 0 0-2.3168 3.7314 6.0863 6.0863 0 0 0 .5245 4.9131 6.046 6.046 0 0 0 4.303 3.1204 6.0858 6.0858 0 0 0 5.1863-.9572 6.0566 6.0566 0 0 0 2.8341-3.9056 5.9818 5.9818 0 0 0 3.3283-1.1099 6.0483 6.0483 0 0 0 2.3168-3.7314 6.0833 6.0833 0 0 0-.5122-4.9131zm-10.282 12.3702a4.57 4.57 0 0 1-2.203-.5646l.092-.0525 3.3934-1.9213a.816.816 0 0 0 .4102-.711v-4.83l1.7144.99a.074.074 0 0 1 .0385.0645v3.911a4.5938 4.5938 0 0 1-3.4455 4.1139zm-8.8143-6.52a4.5681 4.5681 0 0 1-.1683-2.2715l.092.0525 3.3934 1.9213a.8159.8159 0 0 0 .8204 0l4.1827-2.415v1.98a.0741.0741 0 0 1-.0385.0645l-3.3868 1.9547a4.5938 4.5938 0 0 1-4.8929-.2865zm-1.0289-8.5252a4.5681 4.5681 0 0 1 2.0347-1.7069l.092.0525 3.3934 1.9213a.816.816 0 0 0 .4102.1086h.0001a.8159.8159 0 0 0 .4102-.1086l4.1827-2.415v-1.98a.0742.0742 0 0 1 .0385-.0645l3.3868 1.9547a4.5938 4.5938 0 0 1 1.5473 4.6738z"/>
+              <path fill="#74aa9c" d="M22.28 9.82a5.985 5.985 0 00-.51-4.91 6.046 6.046 0 00-4.3-3.12 6.086 6.086 0 00-5.19.96 6.057 6.057 0 00-2.83 3.91 5.982 5.982 0 00-3.33 1.11 6.048 6.048 0 00-2.32 3.73 6.086 6.086 0 00.52 4.91 6.046 6.046 0 004.3 3.12 6.086 6.086 0 005.19-.96 6.057 6.057 0 002.83-3.91 5.982 5.982 0 003.33-1.11 6.048 6.048 0 002.32-3.73 6.083 6.083 0 00-.51-4.91zm-10.28 12.37a4.57 4.57 0 01-2.2-.56l.09-.05 3.39-1.92c.26-.15.41-.43.41-.73v-4.83l1.71.99c.02.01.04.04.04.06v3.91a4.594 4.594 0 01-3.45 4.11z"/>
             </svg>
           ),
           link: "https://chat.openai.com/"
@@ -200,6 +196,7 @@ function Tools() {
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
               <path fill="#D97757" d="M12 2L4.5 20.29l.71.71L12 18l6.79 3 .71-.71L12 2z"/>
+              <circle cx="12" cy="12" r="3" fill="#D97757" opacity="0.5"/>
             </svg>
           ),
           link: "https://claude.ai/"
@@ -207,8 +204,9 @@ function Tools() {
         {
           name: "Grok",
           icon: (
-            <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#000000" className="dark:fill-white" d="M12 2L2 22h20L12 2zm0 4.5L18.5 19H5.5L12 6.5z"/>
+            <svg viewBox="0 0 24 24" className="w-full h-full" fill="none" stroke="currentColor" strokeWidth="2">
+              <path className="stroke-neutral-800 dark:stroke-white" d="M4 4l16 16M4 20L20 4" strokeLinecap="round"/>
+              <circle cx="12" cy="12" r="9" className="stroke-neutral-800 dark:stroke-white"/>
             </svg>
           ),
           link: "https://x.ai/"
@@ -217,8 +215,8 @@ function Tools() {
           name: "Midjourney",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" strokeWidth="1"/>
-              <circle cx="12" cy="12" r="6" fill="currentColor" opacity="0.3"/>
+              <path fill="currentColor" d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+              <path fill="currentColor" d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z" opacity="0.5"/>
             </svg>
           ),
           link: "https://www.midjourney.com/"
@@ -228,6 +226,7 @@ function Tools() {
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
               <path fill="#6B46C1" d="M12 2l2.4 7.4H22l-6 4.6 2.3 7.2-6.3-4.6-6.3 4.6 2.3-7.2-6-4.6h7.6z"/>
+              <path fill="#9F7AEA" d="M12 5.5l1.5 4.5H18l-3.5 2.5 1.5 4.5-4-3-4 3 1.5-4.5L6 10h4.5z" opacity="0.5"/>
             </svg>
           ),
           link: "https://fireflies.ai/"
@@ -236,8 +235,9 @@ function Tools() {
           name: "Junie for WebStorm",
           icon: (
             <svg viewBox="0 0 24 24" className="w-full h-full">
-              <path fill="#000000" className="dark:fill-white" d="M0 0v24h24V0H0zm20 20H4V4h16v16z"/>
-              <path fill="#000000" className="dark:fill-white" d="M17 17h-2V7h2v10zM13 17h-2V9h2v8zM9 17H7v-4h2v4z"/>
+              <rect width="20" height="20" x="2" y="2" rx="4" fill="#000000" className="dark:fill-white" opacity="0.1"/>
+              <path fill="#000000" className="dark:fill-white" d="M12 4c-4.418 0-8 3.582-8 8s3.582 8 8 8 8-3.582 8-8-3.582-8-8-8zm0 14.5c-3.59 0-6.5-2.91-6.5-6.5s2.91-6.5 6.5-6.5 6.5 2.91 6.5 6.5-2.91 6.5-6.5 6.5z"/>
+              <path fill="#000000" className="dark:fill-white" d="M10.5 8.5v7l5-3.5-5-3.5z"/>
             </svg>
           ),
           link: "https://www.jetbrains.com/webstorm/"
@@ -326,12 +326,9 @@ function Tools() {
             >
               {/* Category Header */}
               <div className="mb-8">
-                <h2 className="text-2xl md:text-3xl font-display font-bold mb-3 bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent">
+                <h2 className="text-2xl md:text-3xl font-display font-bold bg-gradient-to-r from-primary-600 to-accent-500 dark:from-primary-400 dark:to-accent-400 bg-clip-text text-transparent">
                   {category.title}
                 </h2>
-                <p className="text-neutral-600 dark:text-neutral-400 text-base md:text-lg">
-                  {category.description}
-                </p>
               </div>
 
               {/* Tools Grid */}
