@@ -105,7 +105,6 @@ function Projects() {
       name: "TRIPP - Wellness and Meditation App",
       description: "Worked on TRIPP, an innovative VR wellness and meditation application available across VR devices and mobile platforms. Contributed to the release of new immersive content and experiences. Most notably, played a key role in the launch of TRIPP on the Apple Vision Pro device, being part of the team that brought the app to Apple's groundbreaking spatial computing platform. This experience provided invaluable insight into launching products on cutting-edge hardware and being part of a major Apple product ecosystem launch.",
       tags: ["VR", "Mobile", "Art", "Growth", "Product", "Marketing", "2023 to 2025"],
-      logo: "/tripp-logo.png",
       image: "/tripp-thumb.png",
       link: "https://www.tripp.com/"
     },
@@ -145,7 +144,6 @@ function Projects() {
       name: "Cleverlit - Literature Kiosk",
       description: "Cleverlit is a digital platform designed for exhibitors at trade shows and events. It allows visitors to scan a code or badge at a booth, select resources (like brochures or PDFs), and receive them instantly via email, while providing analytics on engagement for the exhibitor.",
       tags: ["Custom Software", "2021 to 2023"],
-      logo: "/cleverlit-logo.png",
       image: "/cleverlit-4.png",
       images: ["/cleverlit-1.png", "/cleverlit-2.png", "/cleverlit-3.png", "/cleverlit-4.png", "/cleverlit-5.png", "/cleverlit-6.png"],
       link: "https://www.cleverlit.com/es"

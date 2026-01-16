@@ -147,7 +147,7 @@ function Home() {
                 <img 
                   src="/profile.png" 
                   alt="Manuel Palli" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-4"
                 />
               </div>
             </motion.div>

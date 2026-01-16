@@ -119,6 +119,25 @@ function Tools() {
       ]
     },
     {
+      title: "Design & Creative",
+      description: "Tools for UI/UX design, visual collaboration, and prototyping.",
+      tools: [
+        {
+          name: "Figma",
+          icon: (
+            <svg viewBox="0 0 24 24" className="w-full h-full">
+              <path fill="#F24E1E" d="M12 12a3 3 0 110-6 3 3 0 010 6z"/>
+              <path fill="#FF7262" d="M9 12a3 3 0 110-6 3 3 0 010 6z"/>
+              <path fill="#A259FF" d="M9 18a3 3 0 110-6 3 3 0 010 6z"/>
+              <path fill="#1ABCFE" d="M12 18a3 3 0 110-6 3 3 0 010 6z"/>
+              <path fill="#0ACF83" d="M9 24a3 3 0 110-6 3 3 0 010 6z"/>
+            </svg>
+          ),
+          link: "https://www.figma.com/"
+        }
+      ]
+    },
+    {
       title: "CRM & Sales",
       description: "Customer relationship management and sales automation platform.",
       tools: [
