@@ -64,7 +64,7 @@ function Home() {
               variants={itemVariants}
             >
               <span className="bg-gradient-to-r from-neutral-900 via-neutral-800 to-neutral-700 dark:from-white dark:via-neutral-100 dark:to-neutral-200 bg-clip-text text-transparent">
-                Sr Project & Product Manager
+                Project & Product Manager
               </span>
               <br />
               <span className="bg-gradient-to-r from-primary-600 via-primary-500 to-accent-500 dark:from-primary-400 dark:via-accent-400 dark:to-accent-300 bg-clip-text text-transparent">

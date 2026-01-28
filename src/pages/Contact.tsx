@@ -1,6 +1,45 @@
 import { motion, Variants } from 'framer-motion'
+import { useState, FormEvent, ChangeEvent } from 'react'
+
+interface FormData {
+  email: string
+  subject: string
+  message: string
+}
 
 function Contact() {
+  const [formData, setFormData] = useState<FormData>({
+    email: '',
+    subject: '',
+    message: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target
+    setFormData(prev => ({ ...prev, [name]: value }))
+  }
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    setSubmitStatus('idle')
+
+    try {
+      // Create mailto link as fallback (works without backend)
+      const mailtoLink = `mailto:manuelpalli01@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${encodeURIComponent(`From: ${formData.email}\n\n${formData.message}`)}`
+      window.location.href = mailtoLink
+      
+      setSubmitStatus('success')
+      setFormData({ email: '', subject: '', message: '' })
+    } catch {
+      setSubmitStatus('error')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
+
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -151,7 +190,19 @@ function Contact() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.2 }}
           >
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="p-4 bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-400 rounded-lg text-sm">
+                  Opening your email client...
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="p-4 bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-400 rounded-lg text-sm">
+                  Something went wrong. Please try again or email directly.
+                </div>
+              )}
+
               {/* Email Field */}
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
@@ -159,14 +210,18 @@ function Contact() {
                 transition={{ delay: 0.3, duration: 0.5 }}
               >
                 <label htmlFor="email" className="block text-sm font-medium text-neutral-700 dark:text-neutral-300 mb-2">
-                  Email
+                  Your Email
                 </label>
                 <input
                   type="email"
                   id="email"
                   name="email"
+                  value={formData.email}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 rounded-lg focus:outline-none focus:border-primary-500 dark:focus:border-primary-400 text-neutral-900 dark:text-white transition-colors"
+                  placeholder="your@email.com"
                   required
+                  disabled={isSubmitting}
                 />
               </motion.div>
 
@@ -183,8 +238,12 @@ function Contact() {
                   type="text"
                   id="subject"
                   name="subject"
+                  value={formData.subject}
+                  onChange={handleInputChange}
                   className="w-full px-4 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 rounded-lg focus:outline-none focus:border-primary-500 dark:focus:border-primary-400 text-neutral-900 dark:text-white transition-colors"
+                  placeholder="What's this about?"
                   required
+                  disabled={isSubmitting}
                 />
               </motion.div>
 
@@ -200,23 +259,28 @@ function Contact() {
                 <textarea
                   id="message"
                   name="message"
+                  value={formData.message}
+                  onChange={handleInputChange}
                   rows={6}
                   className="w-full px-4 py-3 bg-transparent border-2 border-neutral-300 dark:border-neutral-600 rounded-lg focus:outline-none focus:border-primary-500 dark:focus:border-primary-400 text-neutral-900 dark:text-white transition-colors resize-none"
+                  placeholder="Your message here..."
                   required
-                ></textarea>
+                  disabled={isSubmitting}
+                />
               </motion.div>
 
               {/* Submit Button */}
               <motion.button
                 type="submit"
-                className="w-full py-4 bg-accent-500 hover:bg-accent-600 dark:bg-accent-600 dark:hover:bg-accent-700 text-white font-bold rounded-lg transition-colors text-lg"
+                className="w-full py-4 bg-accent-500 hover:bg-accent-600 dark:bg-accent-600 dark:hover:bg-accent-700 text-white font-bold rounded-lg transition-colors text-lg disabled:opacity-50 disabled:cursor-not-allowed"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.6, duration: 0.5 }}
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
+                whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
+                whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
+                disabled={isSubmitting}
               >
-                Submit
+                {isSubmitting ? 'Sending...' : 'Send Message'}
               </motion.button>
             </form>
           </motion.div>

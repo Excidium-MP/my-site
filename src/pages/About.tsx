@@ -28,7 +28,7 @@ function About() {
     },
     {
       id: 2,
-      title: "Sr Product Manager",
+      title: "Product Manager",
       company: "TRIPP Inc.",
       period: "September 2023 - February 2025",
       yearRange: "2023 – 2025",
